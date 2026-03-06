@@ -1,0 +1,309 @@
+* {}
+
+
+.roadmapQuestionnaire-bigbox {
+    width: 1440px;
+    margin: 0 auto;
+    min-height: auto;
+    /* 높이 자동 늘리기 */
+    border: solid 1px black;
+}
+
+.roadmapQuestionnaire-main1 {
+    width: 1200px;
+    height: 200px;
+    /* border: solid black; */
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+
+
+}
+
+.roadmapQuestionnaire-titleicon {
+    width: 10%;
+    height: 100%;
+    /* flex: 3; */
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+
+}
+
+.roadmapQuestionnaire-titleiconimg {
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.roadmapQuestionnaire-titlecontent {
+    width: 60%;
+    height: 100%;
+    /* flex: 7; */
+    /* border: solid rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roadmapQuestionnaire-titlecontent1 h1 {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* 택스트 중앙 정렬 */
+
+}
+
+/* main2 /////////////////////////////////////////// */
+
+.roadmapQuestionnaire-jobcard {
+    width: 1200px;
+    height: 500px;
+    /* border: solid yellow; */
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roadmapQuestionnaire-jobcardtopbox,
+.roadmapQuestionnaire-jobcardbotton {
+    width: 100%;
+    height: 50%;
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 카드 1장 */
+.roadmapQuestionnaire-jobcardItem {
+    width: 30%;
+    height: 100%;
+    border: solid rgb(0, 0, 0, 0.2);
+    border-radius: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 카드 안쪽 */
+.roadmapQuestionnaire-jobcardInbox {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 제목/설명 */
+.roadmapQuestionnaire-jobcardTitle {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: solid rgba(1, 1, 1, 0.2);
+}
+
+.roadmapQuestionnaire-jobcardDesc {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+}
+
+/* main3/////////////////////////////////////////// */
+
+
+.roadmapQuestionnaire-roadmapimage {
+    width: 1200px;
+    min-height: 600px;
+    /* border: solid black; */
+    margin: auto;
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.roadmapQuestionnaire-roadmapimage img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+}
+
+
+.roadmapQuestionnaire-roadmapbutton {
+    width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    /* border: solid black; */
+    height: 30px;
+    display :flex;
+    justify-content: right;
+    
+}
+
+
+
+#showmore{
+ width: 70px;
+ height: 30px;
+ background-color: #7d84e6;
+ color: white;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+
+.roadmapQuestionnaire-roadmapExplanation1{
+    width: 1200px;
+    height: auto;
+    /* border: solid blue; */
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* 카드 박스  */
+.roadmapQuestionnaire-roadmapExplanation{
+    width: 100%;
+    height: 30%;
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 실제 글들어가는 박스  */
+.roadmapQuestionnaire-roadmapExplanationSBox{
+    width: 95%;
+    height: 100%;
+    /* border: solid red; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}   
+
+/* 번호 이미지 글 */
+.roadmapQuestionnaire-roadmapExplanationSBoxNumbericon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-bottom: solid rgba(1, 1, 1, 0.2);
+    margin-bottom: 10px;
+}
+
+/* 번호 이미지 글 안 제목 */
+.roadmapQuestionnaire-roadmapExplanationSBoxNumbericon h1{
+    margin: 0;
+}
+
+/* 번호 아이콘 */
+.roadmapQuestionnaire-roadmapExplanationSBoxNumbericon img{
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+/* 글 한줄  */
+.roadmapQuestionnaire-roadmapExplanationSBoxin1{
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    box-sizing: border-box;
+   
+}
+
+/* 글 왼쪽 설명  */
+.roadmapQuestionnaire-roadmapExplanationSBoxin1text1{
+    width: 20%;
+    /* border: solid black; */
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* 글 오른쪽 설명  */
+.roadmapQuestionnaire-roadmapExplanationSBoxin1text2{
+    width: 80%;
+    /* border: solid black; */
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.roadmapQuestionnaire-roadmapExplanationSBoxin1text1 h3,
+.roadmapQuestionnaire-roadmapExplanationSBoxin1text2 h3{
+    margin: 0;
+}
+
+.dd{
+    width: 1200px;
+    height: 95%;
+    border: solid rgba(1, 1, 1, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border-radius: 5;
+
+}
+
+.roadmapQuestionnaire-roadmapco{
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    gap: 5px;
+
+}
+
+
+.roadmapQuestionnaire-roadmapExplanationco{
+    width: 49.8%;
+    height: 30%;
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+  
+}
+
+
+#cnldjq{
+    width: 1200px;
+    height: 200px;
+    border: solid #7d84e6;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+#cnldjq h1{
+    color: #7d84e6;
+
+}
