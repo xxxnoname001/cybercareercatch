@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기업회원 마이페이지(수정)</title>
+  <link rel="stylesheet" href="./../../../assets/css/main/mypage/mypage-company-edit.css">
+</head>
+
+<body>
+  <main>
+    <div class="main-container">
+      <div class="mypage-title">마이페이지</div>
+
+      <form action="" method="post">
+        <div class="mypage-subtitle">기업정보 조회/수정</div>
+        <div class="main-container-section-changeinfo">
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">아이디</div>
+            <div class="mypage-input-wrap">
+              <div name="company_id" class="mypage-info-text" id="company-id">id1234</div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">기업명</div>
+            <div class="mypage-input-wrap">
+              <div name="company_name" class="mypage-info-text" id="company-name">IT솔리드</div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">사업자등록번호</div>
+            <div class="mypage-input-wrap">
+              <div name="company_number" class="mypage-info-text" id="company-number">12345678</div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">기업 주소</div>
+            <div class="mypage-input-wrap">
+              <div name="company_address" class="mypage-info-text" id="company-address">서울시 강남구</div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">채용담당자 이름</div>
+            <div class="mypage-input-wrap">
+              <input type="text" name="company_manager_name" class="mypage-info-text" id="company-manager-name"
+                placeholder="홍길동">
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">채용담당자 연락처</div>
+            <div class="mypage-input-wrap">
+              <input type="text" name="company_manager_phonenumber" class="mypage-info-text"
+                id="company-manager-phonenumber" placeholder="010-0000-0000">
+              <div class="input-message" id="company-phonenumber-message">test문구</div>
+            </div>
+            <button type="button" class="btn" id="company-phonenumber-submit-btn">전송</button>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">인증번호</div>
+            <div class="mypage-input-wrap">
+              <input type="text" name="company_verificationcode" class="mypage-info-text" id="company-verificationcode"
+                placeholder="인증번호">
+              <div class="input-message" id="company-verificationcode-message">test문구</div>
+            </div>
+            <button type="button" class="btn" id="company-verificationcode-btn">확인</button>
+          </div>
+
+
+          <div class="mypage-button-box">
+            <button type="submit" class="btn" id="mypage-edit-btn">수정</button>
+            <button type="button" class="btn" id="mypage-editcancel-btn">취소</button>
+          </div>
+      </form>
+
+      <div class="mypage-subtitle">비밀번호 변경</div>
+      <form action="" method="post">
+        <div class="main-container-section-changeinfo">
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">현재 비밀번호</div>
+
+            <div class="mypage-input-wrap">
+              <input type="password" name="company_current_pw" class="mypage-info-text" id="company-current-pw">
+              <div class="input-message" id="company-current-pw-message">test문구</div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">변경할 비밀번호</div>
+
+            <div class="mypage-input-wrap">
+              <input type="password" name="company_change_pw" class="mypage-info-text" id="company-change-pw">
+              <div class="input-message" id="company-change-pw-message"></div>
+            </div>
+          </div>
+
+          <div class="mypage-info-box">
+            <div class="mypage-info-title">변경할 비밀번호 확인</div>
+
+            <div class="mypage-input-wrap">
+              <input type="password" name="company_check_pw" class="mypage-info-text" id="company-check-pw">
+              <div class="input-message" id="company-check-pw-message">test문구</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mypage-button-box">
+          <button type="submit" class="btn" id="mypage-pwedit-btn">수정</button>
+          <button type="button" class="btn" id="mypage-pwcancel-btn">취소</button>
+        </div>
+      </form>
+
+      <button type="button" class="btn" id="company-quit">회원탈퇴</button>
+    </div>
+  </main>
+</body>
+
+</html>
