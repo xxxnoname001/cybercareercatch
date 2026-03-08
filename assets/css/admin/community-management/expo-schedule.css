@@ -1,111 +1,102 @@
-.qnaManagement-body {
-    margin: 0;
-    background: #ffffff;
+.expoSchedule-body {
+margin: 0;
+background: #ffffff;
 }
 
-.qnaManagement-container {
-    width: 1300px;
-    margin: 40px auto;
-    background: #c9cfe0;
-    padding: 30px;
-   
+.expoSchedule-container {
+width: 1300px;
+margin: 40px auto;
+background: #c9cfe0;
+padding: 30px;
 }
 
-.qnaManagement-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.expoSchedule-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
-.qnaManagement-title {
-    background: #6b83d6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-   
-}
-/*상단메뉴*/
-.qnaManagement-menu1 {
-    display: flex;
-    gap: 40px;
+.expoSchedule-title {
+background: #6b83d6;
+color: white;
+padding: 10px 20px;
+border-radius: 6px;
+font-weight: bold;
+cursor: pointer;
 }
 
-.qnaManagement-menu1 a {
-    background: #6b83d6;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-   
+.expoSchedule-menu1 {
+display: flex;
+gap: 40px;
 }
 
-.qnaManagement-menu1 a:hover {
-    background: #5569c1;
+.expoSchedule-menu1 a {
+background: #6b83d6;
+color: white;
+padding: 10px 25px;
+border-radius: 6px;
+text-decoration: none;
 }
 
-.qnaManagement-logout {
-    padding: 6px 12px;
-  
+.expoSchedule-menu1 a:hover {
+background: #5569c1;
 }
 
-.qnaManagement-logout:hover {
-    background: #dcdcdc;
+.expoSchedule-logout {
+padding: 6px 12px;
 }
 
-.qnaManagement-main {
-    display: flex;
-    margin-top: 30px;
-    gap: 20px;
+.expoSchedule-logout:hover {
+background: #dcdcdc;
 }
 
-.qnaManagement-leftbar {
-    width: 200px;
-    background: #adbbdb;
-    padding-top: 20px;
+.expoSchedule-main {
+display: flex;
+margin-top: 30px;
+gap: 20px;
 }
 
-.qnaManagement-left-item {
-    padding: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 4px;
-    color: #222;
+.expoSchedule-leftbar {
+width: 200px;
+background: #adbbdb;
+padding-top: 20px;
 }
 
-.qnaManagement-left-item:hover {
-    background: #949fca;
-    color: white;
+.expoSchedule-left-item {
+padding: 20px;
+margin-bottom: 10px;
+text-align: center;
+cursor: pointer;
+border-radius: 4px;
+color: #222;
 }
 
-.qnaManagement-real {
-    background: #8a8a8a;
-    color: white;
-    font-weight: 700;
-    cursor: default;
-    user-select: none;
+.expoSchedule-left-item:hover {
+background: #949fca;
+color: white;
 }
 
-/* 오른쪽 영역 */
+.expoSchedule-real {
+background: #8a8a8a;
+color: white;
+font-weight: 700;
+cursor: default;
+user-select: none;
+}
 
-.qnaManagement-content{
+.expoSchedule-content{
 flex:1;
 background:white;
 padding:30px;
 }
 
-
-/* 상단 탭 */
-
-.expo-tab{
+.expoSchedule-tab{
 display:flex;
 gap:10px;
 margin-bottom:20px;
 }
 
-.expo-tab-item{
+.expoSchedule-tab-item{
 flex:1;
 background:#e6e6e6;
 padding:15px;
@@ -113,61 +104,52 @@ text-align:center;
 cursor:pointer;
 }
 
-.expo-tab-item.real{
+.expoSchedule-active{
 background:white;
 font-weight:bold;
 }
 
-
-/* 테이블 */
-
-.expo-table{
+.expoSchedule-table{
 width:100%;
 }
 
-.expo-row{
+.expoSchedule-row{
 display:flex;
 padding:10px 0;
 border-bottom:1px solid #ddd;
 text-align:center;
 }
 
-.expo-row div{
+.expoSchedule-row div{
 flex:1;
 }
 
-.expo-head{
+.expoSchedule-head{
 font-weight:bold;
 background:#f3f3f3;
 }
 
-
-/* 페이지 */
-
-.expo-page{
+.expoSchedule-page{
 display:flex;
 justify-content:center;
 gap:10px;
 margin:30px 0;
 }
 
-.expo-page span{
+.expoSchedule-page span{
 cursor:pointer;
 }
 
-.expo-page .active{
+.expoSchedule-page-active{
 color:#4c6ef5;
 font-weight:bold;
 }
 
-
-/* 참가기업 */
-
-.expo-company{
+.expoSchedule-company{
 margin-top:40px;
 }
 
-.company-row{
+.expoSchedule-company-row{
 display:flex;
 justify-content:space-between;
 padding:10px 0;

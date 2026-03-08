@@ -1,72 +1,77 @@
-.qnaManagement-body {
+body,
+html {
     margin: 0;
-    background: #ffffff;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.qnaManagement-container {
+/* 클래스 축약 */
+.qna-body {
+    margin: 0;
+    background: #fff;
+}
+
+.qna-container {
     width: 1300px;
     margin: 40px auto;
     background: #c9cfe0;
     padding: 30px;
-   
 }
 
-.qnaManagement-top {
+.qna-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.qnaManagement-title {
+.qna-title {
     background: #6b83d6;
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-   
 }
-/*상단메뉴*/
-.qnaManagement-menu1 {
+
+.qna-menu {
     display: flex;
     gap: 40px;
 }
 
-.qnaManagement-menu1 a {
+.qna-menu a {
     background: #6b83d6;
     color: white;
     padding: 10px 25px;
     border-radius: 6px;
     text-decoration: none;
-   
 }
 
-.qnaManagement-menu1 a:hover {
+.qna-menu a:hover {
     background: #5569c1;
 }
 
-.qnaManagement-logout {
+.qna-logout {
     padding: 6px 12px;
-  
+    cursor: pointer;
 }
 
-.qnaManagement-logout:hover {
+.qna-logout:hover {
     background: #dcdcdc;
 }
 
-.qnaManagement-main {
+.qna-main {
     display: flex;
     margin-top: 30px;
     gap: 20px;
 }
 
-.qnaManagement-leftbar {
+.qna-leftbar {
     width: 200px;
     background: #adbbdb;
     padding-top: 20px;
 }
 
-.qnaManagement-left-item {
+.qna-left-item {
     padding: 20px;
     margin-bottom: 10px;
     text-align: center;
@@ -75,12 +80,12 @@
     color: #222;
 }
 
-.qnaManagement-left-item:hover {
+.qna-left-item:hover {
     background: #949fca;
     color: white;
 }
 
-.qnaManagement-real {
+.qna-active {
     background: #8a8a8a;
     color: white;
     font-weight: 700;
@@ -88,125 +93,133 @@
     user-select: none;
 }
 
-
-/* 오른쪽 콘텐츠 */
-
-.qna-content{
-flex:1;
-background:white;
-padding:40px;
+.qna-content {
+    flex: 1;
+    background: white;
+    padding: 40px;
 }
-
 
 /* 공지 */
-
-.qna-notice-title{
-margin-bottom:20px;
+.qna-notice-title {
+    margin-bottom: 20px;
 }
 
-.qna-notice-box{
-width:700px;
-height:200px;
-background:#e6e6e6;
+#notice-box {
+    width: 700px;
+    height: 200px;
+    background: #e6e6e6;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 4px;
 }
 
-.qna-notice-btn{
-width:700px;
-text-align:right;
-margin-top:10px;
+#notice-box:empty:before {
+    content: attr(placeholder);
+    color: #888;
 }
 
-.qna-notice-btn button{
-background:#6b83d6;
-color:white;
-border:none;
-padding:6px 18px;
-border-radius:4px;
-cursor: pointer;
+.qna-notice-btn {
+    width: 700px;
+    text-align: right;
+    margin-top: 10px;
 }
 
+.qna-notice-btn button {
+    background: #6b83d6;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 /* 제목 */
-
-.qna-title{
-margin-top:70px;
-margin-bottom:20px;
+.qna-title {
+    margin-top: 70px;
+    margin-bottom: 20px;
 }
-
 
 /* 기업 선택 */
-
-.qna-filter{
-margin-bottom:20px;
+.qna-filter {
+    margin-bottom: 20px;
 }
 
-.qna-filter select{
-height:35px;
-padding:5px 10px;
-border-radius:5px;
+.qna-filter select {
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-
 
 /* 테이블 */
-
-.qna-table{
-width:100%;
+.qna-table {
+    width: 100%;
 }
 
-.qna-row{
-display:flex;
-padding:12px 0;
-border-bottom:1px solid #ddd;
+.qna-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.qna-head{
-font-weight:bold;
-border-top:2px solid #333;
+.qna-head {
+    font-weight: bold;
+    border-top: 2px solid #333;
 }
 
+.col1 {
+    width: 80px;
+}
 
-/* 컬럼 */
+.col2 {
+    flex: 1;
+}
 
-.col1{width:80px;}
-.col2{flex:1;}
-.col3{width:120px;}
-.col4{width:120px;}
-.col5{width:80px;}
-.col6{width:100px;text-align:center;}
+.col3 {
+    width: 120px;
+}
 
+.col4 {
+    width: 120px;
+}
+
+.col5 {
+    width: 80px;
+}
+
+.col6 {
+    width: 100px;
+    text-align: center;
+}
 
 /* 페이지 */
-
-.qna-page{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:30px;
+.qna-page {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.qna-page span{
-cursor:pointer;
+.qna-page span {
+    cursor: pointer;
 }
 
-.qna-page .active{
-color:#4c6ef5;
-font-weight:bold;
+.qna-page .active {
+    color: #4c6ef5;
+    font-weight: bold;
 }
-
 
 /* 삭제 버튼 */
-
-.qna-delete{
-display:flex;
-justify-content:flex-end;
-margin-top:20px;
+.qna-delete {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
-.qna-delete button{
-background:#d87c7c;
-border:none;
-color:white;
-padding:10px 25px;
-border-radius:5px;
-cursor: pointer;
+.qna-delete button {
+    background: #d87c7c;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
 }

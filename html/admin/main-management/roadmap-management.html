@@ -2,199 +2,193 @@
 <html lang="ko">
 
 <head>
-<meta charset="UTF-8">
-<title>관리자 페이지</title>
-<link rel="stylesheet" href="/assets/css/admin/main-management/roadmap-management.css">
+    <meta charset="UTF-8">
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="/assets/css/admin/main-management/roadmap-management.css">
 </head>
 
-<body class="qnaManagement-body">
+<body class="rm-body"><!-- rm: roadmap management -->
 
-<div class="qnaManagement-container">
+    <div class="rm-container"><!-- rm: roadmap management -->
 
-<main class="qnaManagement-main">
+        <main class="rm-main"><!-- rm: roadmap management -->
 
-    <!-- 사이드바 -->
-    <aside class="qnaManagement-leftbar">
+            <!-- 사이드바 -->
+            <aside class="rm-leftbar"><!-- rm: leftbar -->
 
-        <div class="qnaManagement-left-item">
-            질의문 관리
-        </div>
+                <div class="rm-left-item"><a href="./qna-management.html">질의문 관리</a></div>
+                <div class="rm-left-item"><a href="./company-info.html">기업 정보페이지</a></div>
+                <div class="rm-left-item rm-active"><a href="./roadmap-management.html">로드맵 관리</a></div><!-- rm-active: 현재 선택된 메뉴 -->
 
-        <div class="qnaManagement-left-item">
-            기업 정보페이지
-        </div>
+            </aside>
 
-        <div class="qnaManagement-left-item qnaManagement-real">
-            로드맵 관리
-        </div>
+            <!-- 오른쪽 콘텐츠 -->
+            <section class="rm-content"><!-- rm: content -->
 
-    </aside>
+                <form>
 
-    <!-- 오른쪽 콘텐츠 -->
-    <section class="qnaManagement-content">
+                    <!-- 탭 -->
+                    <div class="rm-tabmenu"><!-- rm-tabmenu: 상단 탭 -->
+                        <a href="#">침해사고/디지털포렌식</a>
+                        <a href="#">보안관제</a>
+                        <a href="#">보안컨설팅</a>
+                        <a href="#">시스템/네트워크 엔지니어</a>
+                    </div>
 
-    <form>
+                    <!-- 이미지 -->
+                    <div class="rm-img"><!-- rm-img: 이미지 업로드 영역 -->
+                        <label>이미지</label>
+                        <input type="text">
+                        <button type="button" class="rm-upload-btn">업로드</button>
+                    </div>
 
-        <!-- 탭 -->
-        <div class="qnaManagement-tabmenu">
-            <a href="#">공지</a>
-            <a href="#">창업/전문</a>
-            <a href="#">보안 구축/개발</a>
-            <a href="#">기타</a>
-        </div>
+                    <!-- 직군 -->
+                    <div class="rm-sec100"><!-- rm-sec100: 직군 영역 -->
 
-        <!-- 이미지 -->
-        <div class="qnaManagement-img">
-            <label>이미지</label>
-            <input type="text">
-            <button type="button" class="upload-btn">업로드</button>
-        </div>
+                        <div><label>직군 이름</label><input></div>
+                        <div><label>이름 설명</label><input></div>
 
-        <!-- 직군 -->
-        <div class="qnaManagement-section100">
+                        <h3>직업</h3>
 
-            <div><label>직군 이름</label><input></div>
-            <div><label>이름 설명</label><input></div>
+                        <div><label>직업1</label><input></div>
+                        <div><label>직업1 설명</label><input></div>
 
-            <h3>직업</h3>
+                        <div><label>직업2</label><input></div>
+                        <div><label>직업2 설명</label><input></div>
 
-            <div><label>직업1</label><input></div>
-            <div><label>직업1 설명</label><input></div>
+                        <div><label>직업3</label><input></div>
+                        <div><label>직업3 설명</label><input></div>
 
-            <div><label>직업2</label><input></div>
-            <div><label>직업2 설명</label><input></div>
+                        <div><label>직업4</label><input></div>
+                        <div><label>직업4 설명</label><input></div>
 
-            <div><label>직업3</label><input></div>
-            <div><label>직업3 설명</label><input></div>
+                        <div><label>직업5</label><input></div>
+                        <div><label>직업5 설명</label><input></div>
 
-            <div><label>직업4</label><input></div>
-            <div><label>직업4 설명</label><input></div>
+                        <div><label>직업6</label><input></div>
+                        <div><label>직업6 설명</label><input></div>
 
-            <div><label>직업5</label><input></div>
-            <div><label>직업5 설명</label><input></div>
+                    </div>
 
-            <div><label>직업6</label><input></div>
-            <div><label>직업6 설명</label><input></div>
+                    <!-- 1 -->
+                    <div class="rm-sec200"><!-- rm-sec200: 1. 기초 다지기 -->
 
-        </div>
+                        <h3>1. 기초 다지기</h3>
 
-        <!-- 1 -->
-        <div class="qnaManagement-section200">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용1 설명</label><input></div>
 
-            <h3>1. 기초 다지기</h3>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용2 설명</label><input></div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용1 설명</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용3 설명</label><input></div>
 
-            <div><label>내용2</label><input></div>
-            <div><label>내용2 설명</label><input></div>
+                    </div>
 
-            <div><label>내용3</label><input></div>
-            <div><label>내용3 설명</label><input></div>
+                    <!-- 2 -->
+                    <div class="rm-sec300"><!-- rm-sec300: 2. 보안 기초 -->
 
-        </div>
+                        <h3>2. 보안 기초 다지기</h3>
 
-        <!-- 2 -->
-        <div class="qnaManagement-section300">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용1 설명</label><input></div>
 
-            <h3>2. 보안 기초 다지기</h3>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용2 설명</label><input></div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용1 설명</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용3 설명</label><input></div>
 
-            <div><label>내용2</label><input></div>
-            <div><label>내용2 설명</label><input></div>
+                    </div>
 
-            <div><label>내용3</label><input></div>
-            <div><label>내용3 설명</label><input></div>
+                    <!-- 3 -->
+                    <div class="rm-sec400"><!-- rm-sec400: 3. 실습 -->
 
-        </div>
+                        <h3>3. 실습</h3>
 
-        <!-- 3 -->
-        <div class="qnaManagement-400">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용1 설명</label><input></div>
 
-            <h3>3. 실습</h3>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용2 설명</label><input></div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용1 설명</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용3 설명</label><input></div>
 
-            <div><label>내용2</label><input></div>
-            <div><label>내용2 설명</label><input></div>
+                    </div>
 
-            <div><label>내용3</label><input></div>
-            <div><label>내용3 설명</label><input></div>
+                    <!-- 4 -->
+                    <div class="rm-sec500"><!-- rm-sec500: 4. 결과물 -->
 
-        </div>
+                        <h3>4. 결과물</h3>
 
-        <!-- 4 -->
-        <div class="qnaManagement-section500">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용1 설명</label><input></div>
 
-            <h3>4. 결과물</h3>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용2 설명</label><input></div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용1 설명</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용3 설명</label><input></div>
 
-            <div><label>내용2</label><input></div>
-            <div><label>내용2 설명</label><input></div>
+                    </div>
 
-            <div><label>내용3</label><input></div>
-            <div><label>내용3 설명</label><input></div>
+                    <!-- 추천 기술 -->
+                    <div class="rm-sec600"><!-- rm-sec600: 추천 기술 -->
 
-        </div>
+                        <h3>추천 기술</h3>
 
-        <!-- 추천 기술 -->
-        <div class="qnaManagement-section600">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용4</label><input></div>
+                        <div><label>내용5</label><input></div>
+                        <div><label>내용6</label><input></div>
+                        <div><label>내용7</label><input></div>
 
-            <h3>추천 기술</h3>
+                    </div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용2</label><input></div>
-            <div><label>내용3</label><input></div>
-            <div><label>내용4</label><input></div>
-            <div><label>내용5</label><input></div>
-            <div><label>내용6</label><input></div>
-            <div><label>내용7</label><input></div>
+                    <!-- 추천 성향 -->
+                    <div class="rm-sec700"><!-- rm-sec700: 추천 성향 -->
 
-        </div>
+                        <h3>추천 성향</h3>
 
-        <!-- 추천 성향 -->
-        <div class="qnaManagement-700">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용4</label><input></div>
 
-            <h3>추천 성향</h3>
+                    </div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용2</label><input></div>
-            <div><label>내용3</label><input></div>
-            <div><label>내용4</label><input></div>
+                    <!-- 추천 자격증 -->
+                    <div class="rm-sec800"><!-- rm-sec800: 추천 자격증 -->
 
-        </div>
+                        <h3>추천 자격증</h3>
 
-        <!-- 추천 자격증 -->
-        <div class="qnaManagement-section800">
+                        <div><label>내용1</label><input></div>
+                        <div><label>내용2</label><input></div>
+                        <div><label>내용3</label><input></div>
+                        <div><label>내용4</label><input></div>
 
-            <h3>추천 자격증</h3>
+                    </div>
 
-            <div><label>내용1</label><input></div>
-            <div><label>내용2</label><input></div>
-            <div><label>내용3</label><input></div>
-            <div><label>내용4</label><input></div>
+                    <!-- 버튼 -->
+                    <div class="rm-buttons"><!-- rm-buttons: form buttons -->
+                        <button class="rm-btn1">확인</button>
+                        <button class="rm-btn2">수정</button>
+                        <button type="reset" class="rm-btn3">취소</button>
+                    </div>
 
-        </div>
+                </form>
 
-        <!-- 버튼 -->
-        <div class="qnaManagement-buttons">
-            <button class="btn1">확인</button>
-            <button class="btn2">수정</button>
-            <button type="reset" class="btn3">취소</button>
-        </div>
+            </section>
 
-    </form>
+        </main>
 
-    </section>
+    </div>
 
-</main>
-
-</div>
-
+    <script src="/assets/js/admin/main-management/roadmap-management.js"></script>
 </body>
+
 </html>

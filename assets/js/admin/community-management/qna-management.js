@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    const questions = document.querySelectorAll(".qnaManagement-question");
+    const questions = document.querySelectorAll(".qnaMgmt-qItem");
 
-    questions.forEach((question) => {
+    questions.forEach(function(question){
 
         const input = question.querySelector("input");
-        const checkBtn = question.querySelector(".qnaManagement-check");
-        const reviseBtn = question.querySelector(".qnaManagement-revise");
-        const cancelBtn = question.querySelector(".qnaManagement-cancel");
+
+        const checkBtn = question.querySelector(".qnaMgmt-check");
+        const editBtn = question.querySelector(".qnaMgmt-edit");
+        const cancelBtn = question.querySelector(".qnaMgmt-cancel");
 
         let savedValue = "";
 
-        // 확인
+  
         checkBtn.addEventListener("click", function(){
 
             if(input.value.trim() === ""){
@@ -20,21 +21,21 @@ document.addEventListener("DOMContentLoaded", function(){
             }
 
             savedValue = input.value;
+
             input.disabled = true;
 
             alert("저장되었습니다.");
 
         });
 
-        // 수정
-        reviseBtn.addEventListener("click", function(){
+        editBtn.addEventListener("click", function(){
 
             input.disabled = false;
+
             input.focus();
 
         });
 
-        // 취소
         cancelBtn.addEventListener("click", function(){
 
             input.value = savedValue;
