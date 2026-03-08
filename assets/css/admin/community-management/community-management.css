@@ -1,0 +1,205 @@
+.qnaManagement-body {
+    margin: 0;
+    background: #ffffff;
+}
+
+.qnaManagement-container {
+    width: 1300px;
+    margin: 40px auto;
+    background: #c9cfe0;
+    padding: 30px;
+   
+}
+
+.qnaManagement-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qnaManagement-title {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+/*상단메뉴*/
+.qnaManagement-menu1 {
+    display: flex;
+    gap: 40px;
+}
+
+.qnaManagement-menu1 a {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+   
+}
+
+.qnaManagement-menu1 a:hover {
+    background: #5569c1;
+}
+
+.qnaManagement-logout {
+    padding: 6px 12px;
+  
+}
+
+.qnaManagement-logout:hover {
+    background: #dcdcdc;
+}
+
+.qnaManagement-main {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.qnaManagement-leftbar {
+    width: 200px;
+    background: #adbbdb;
+    padding-top: 20px;
+}
+
+.qnaManagement-left-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #222;
+}
+
+.qnaManagement-left-item:hover {
+    background: #949fca;
+    color: white;
+}
+
+.qnaManagement-real {
+    background: #8a8a8a;
+    color: white;
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
+}
+/* 오른쪽 영역 */
+
+.community-content{
+flex:1;
+background:white;
+padding:40px;
+}
+
+
+/* 공지 */
+
+.notice-title{
+margin-bottom:20px;
+}
+
+.notice-box{
+width:70%;
+height:200px;
+background:#eaeaea;
+}
+
+.notice-btn{
+width:70%;
+text-align:right;
+margin-top:10px;
+}
+
+.notice-btn button{
+background:#6b83d6;
+color:white;
+border:none;
+padding:8px 20px;
+cursor: pointer;
+}
+
+
+/* 게시판 */
+
+.board-title{
+margin-top:80px;
+margin-bottom:30px;
+}
+
+
+/* 테이블 */
+
+.board-table{
+width:100%;
+}
+
+.board-row{
+display:flex;
+padding:12px 0;
+border-bottom:1px solid #ddd;
+}
+
+.board-head{
+font-weight:bold;
+}
+
+.col1{
+width:80px;
+}
+
+.col2{
+flex:1;
+}
+
+.col3{
+width:120px;
+}
+
+.col4{
+width:120px;
+}
+
+.col5{
+width:120px;
+text-align:center;
+}
+
+
+/* 페이지 */
+
+.board-page{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:30px;
+}
+
+.board-page span{
+cursor:pointer;
+}
+
+.board-page .active{
+color:#4c6ef5;
+font-weight:bold;
+}
+
+
+/* 삭제 버튼 */
+
+.board-delete{
+display:flex;
+justify-content:flex-end;
+margin-top:20px;
+}
+
+.board-delete button{
+background:#d67b7b;
+border:none;
+color:white;
+padding:10px 25px;
+cursor: pointer;
+}
