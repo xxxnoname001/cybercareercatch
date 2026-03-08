@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCareerCatch - 기업 QnA 상세</title>
+    <link rel="stylesheet" href="../../../assets/css/main/qna/qna-detail.css">
+</head>
+<body>
+      <!-- qna-detail-main : 상세 메인 영역 -->
+  <main class="qna-detail-main">
+    <div class="qna-detail-top">
+      <h2 class="qna-detail-section-title">기업 QnA</h2>
+      <a href="qna-list.html" class="qna-btn-primary">기업 QnA 목록 이동하기</a>
+    </div>
+
+    <!-- qna-detail-post : 게시글 본문 카드 -->
+    <div class="qna-detail-post">
+      <div class="qna-detail-post-hdr">
+        <!-- qna-detail-post-title : 게시글 제목 -->
+        <div class="qna-detail-post-title" id="detailTitle">&lt;코리아IT&gt; 질문이 있습니다</div>
+        <!-- qna-detail-post-meta : 작성자/조회수 메타 -->
+        <div class="qna-detail-post-meta">
+          <span id="detailCompany">코리아IT</span>
+          <span>|</span>
+          <span>글쓴이 : <span id="detailAuthor">해커</span></span>
+          <span>|</span>
+          <span>조회수 : <span id="detailViews">34</span></span>
+        </div>
+        <!-- qna-detail-post-date : 작성일 -->
+        <div class="qna-detail-post-date" id="detailDate">2026.02.28 14:00</div>
+        <!-- qna-detail-tag : 상태 태그 (tag 축약) -->
+        <span class="qna-detail-tag" id="detailTag">소식</span>
+      </div>
+      <!-- qna-detail-post-body : 본문 내용 -->
+      <div class="qna-detail-post-body" id="detailBody">
+        아니 여기 화장실 어딨음?
+      </div>
+    </div>
+
+    <!-- qna-detail-cmts : 댓글 목록 (cmts = comments 축약) -->
+    <div class="qna-detail-cmts" id="detailComments"></div>
+
+    <!-- qna-detail-reply : 댓글 입력 영역 (reply 축약) -->
+    <div class="qna-detail-reply">
+      <input class="qna-detail-reply-inp" type="text" placeholder="댓글을 입력하세요" id="replyInput"/>
+      <button class="qna-btn-primary" id="btnReply">입력</button>
+    </div>
+  </main>
+  <script src="../../../assets/js/main/qna/qna-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCareerCatch - 기업 QnA 작성</title>
+    <link rel="stylesheet" href="../../../assets/css/main/qna/add-qna.css">
+</head>
+<body>
+    <!-- qna-write-main : 글쓰기 메인 영역 -->
+  <main class="qna-write-main">
+    <div class="qna-write-top">
+      <h2 class="qna-write-title">기업QnA</h2>
+      <a href="qna-list.html" class="qna-btn-primary">기업 QnA 목록 이동하기</a>
+    </div>
+
+    <!-- qna-write-form : 글쓰기 폼 래퍼 -->
+    <div class="qna-write-form">
+
+      <!-- qna-write-filter-sel : 기업 선택 드롭다운 (sel = select 축약) -->
+      <div class="qna-write-filter">
+        <select class="qna-write-filter-sel" id="writeCompanyFilter">
+          <option value="">기업선택</option>
+          <option>코리아IT</option>
+          <option>회사1</option>
+          <option>회사2</option>
+          <option>회사3</option>
+          <option>회사4</option>
+        </select>
+      </div>
+
+      <!-- qna-write-inp-title : 제목 입력창 (inp = input 축약) -->
+      <input class="qna-write-inp-title" type="text" placeholder="제목을 입력해주세요" id="writeTitle"/>
+
+      <!-- qna-write-textarea : 본문 입력창 -->
+      <textarea class="qna-write-textarea" placeholder="글문 내용을 입력해주세요." id="writeBody"></textarea>
+
+      <!-- qna-write-actions : 제출 버튼 영역 -->
+      <div class="qna-write-actions">
+        <button class="qna-btn-primary" id="btnSubmit">작성완료</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../../assets/js/main/qna/add-qna.js"></script>
+</body>
+</html>

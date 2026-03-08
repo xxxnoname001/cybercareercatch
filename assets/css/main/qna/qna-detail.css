@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6fb;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* qna-btn-primary : 주요 액션 버튼 (공통) */
+.qna-btn-primary {
+    background: #6c7fe8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.qna-btn-primary:hover {
+    background: #5a6ed6;
+}
+
+/* ── DETAIL PAGE ── */
+/* qna-detail-main : 상세 메인 영역 */
+.qna-detail-main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+}
+
+/* qna-detail-top : 섹션 제목 + 목록 이동 버튼 행 */
+.qna-detail-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* qna-detail-section-title : 섹션 제목 */
+.qna-detail-section-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* qna-detail-post : 게시글 본문 카드 */
+.qna-detail-post {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #eee;
+}
+
+/* qna-detail-post-hdr : 게시글 헤더 */
+.qna-detail-post-hdr {
+    margin-bottom: 16px;
+}
+
+/* qna-detail-post-title : 게시글 제목 */
+.qna-detail-post-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* qna-detail-post-meta : 작성자/조회수 메타 행 */
+.qna-detail-post-meta {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+/* qna-detail-post-date : 작성일 */
+.qna-detail-post-date {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+/* qna-detail-tag : 상태 태그 (tag 축약) */
+.qna-detail-tag {
+    display: inline-block;
+    background: #6c7fe8;
+    color: white;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+/* qna-detail-post-body : 본문 내용 */
+.qna-detail-post-body {
+    font-size: 14px;
+    color: #444;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+    line-height: 1.8;
+}
+
+/* qna-detail-cmts : 댓글 목록 래퍼 (cmts = comments 축약) */
+.qna-detail-cmts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+/* qna-detail-cmt : 개별 댓글 카드 */
+.qna-detail-cmt {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 14px 16px;
+    position: relative;
+}
+
+/* qna-detail-cmt-meta : 댓글 작성자/날짜 */
+.qna-detail-cmt-meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 6px;
+    display: flex;
+    gap: 12px;
+}
+
+/* qna-detail-cmt-body : 댓글 내용 */
+.qna-detail-cmt-body {
+    font-size: 13px;
+    color: #444;
+}
+
+/* qna-detail-cmt-del : 댓글 삭제 버튼 (del = delete 축약) */
+.qna-detail-cmt-del {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qna-detail-cmt-del:hover {
+    color: #c0392b;
+}
+
+/* qna-detail-reply : 댓글 입력 영역 (reply 축약) */
+.qna-detail-reply {
+    display: flex;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+/* qna-detail-reply-inp : 댓글 입력창 (inp = input 축약) */
+.qna-detail-reply-inp {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.qna-detail-reply-inp::placeholder {
+    color: #bbb;
+}

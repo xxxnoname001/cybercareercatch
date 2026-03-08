@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberCareerCatch - 박람회 일정</title>
+    <link rel="stylesheet" href="../../../assets/css/main/expo/expo-calendar.css" />
+</head>
+
+<body>
+    <main class="expo-main">
+
+        <!-- expo-cal : 캘린더 섹션 (cal = calendar 축약) -->
+        <section class="expo-cal">
+            <div class="expo-cal-hdr">
+                <button class="expo-cal-btn" id="prevMonth">&#8249;</button>
+                <div class="expo-cal-month">
+                    <span class="expo-cal-month-num" id="calMonthNum">3</span>
+                    <span class="expo-cal-month-txt" id="calMonthText">MAR</span>
+                    <span class="expo-cal-year" id="calYearText">2026</span>
+                </div>
+                <button class="expo-cal-btn" id="nextMonth">&#8250;</button>
+            </div>
+            <!-- expo-cal-tbl : 캘린더 테이블 (tbl = table 축약) -->
+            <table class="expo-cal-tbl" id="calTable">
+                <thead>
+                    <tr>
+                        <th class="expo-cal-tbl-sun">SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th class="expo-cal-tbl-sat">SAT</th>
+                    </tr>
+                </thead>
+                <tbody id="calBody"></tbody>
+            </table>
+        </section>
+
+        <!-- expo-list : 박람회 참가 기업 리스트 섹션 -->
+        <section class="expo-list">
+            <h2 class="expo-list-title">박람회 이름</h2>
+            <!-- expo-list-tabs : 섹션 탭 -->
+            <div class="expo-list-tabs">
+                <button class="expo-list-tab expo-list-tab-active" data-tab="expo1">박람회 1</button>
+                <button class="expo-list-tab" data-tab="expo2">박람회 2</button>
+            </div>
+            <!-- expo-list-tbl : 참가기업 테이블 (tbl = table 축약) -->
+            <table class="expo-list-tbl" id="expoTable">
+                <thead>
+                    <tr>
+                        <th>회사명</th>
+                        <th>위치</th>
+                        <th>모집 직군</th>
+                    </tr>
+                </thead>
+                <tbody id="expoBody"></tbody>
+            </table>
+            <!-- expo-list-notice : 기업 신청 안내 -->
+            <div class="expo-list-notice">
+                <p><strong>기업 신청 이메일 : CyberCarrerCatch@gmail.com</strong></p>
+                <p><strong>기업 신청은 박람회 개최일 전 10일 까지 입니다</strong></p>
+            </div>
+        </section>
+
+    </main>
+    <script src="../../../assets/js/main/expo/expo-calendar.js"></script>
+</body>
+
+</html>

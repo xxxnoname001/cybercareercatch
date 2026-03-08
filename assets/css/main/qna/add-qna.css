@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6fb;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* qna-btn-primary : 주요 액션 버튼 (공통) */
+.qna-btn-primary {
+    background: #6c7fe8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.qna-btn-primary:hover {
+    background: #5a6ed6;
+}
+
+/* ── WRITE PAGE ── */
+/* qna-write-main : 글쓰기 메인 영역 */
+.qna-write-main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+}
+
+/* qna-write-top : 제목 + 목록 이동 버튼 행 */
+.qna-write-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* qna-write-title : 글쓰기 섹션 제목 */
+.qna-write-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* qna-write-form : 글쓰기 폼 카드 */
+.qna-write-form {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 28px;
+    background: #fff;
+}
+
+/* qna-write-meta : 폰트 메타 표시줄 */
+.qna-write-meta {
+    font-size: 11px;
+    color: #c0392b;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* qna-write-meta-body : 본문 영역 폰트 메타 */
+.qna-write-meta-body {
+    color: #aaa;
+}
+
+/* qna-write-filter : 기업 선택 래퍼 */
+.qna-write-filter {
+    margin-bottom: 14px;
+}
+
+/* qna-write-filter-sel : 기업 select (sel = select 축약) */
+.qna-write-filter-sel {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 28px 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+/* qna-write-inp-title : 제목 입력창 (inp = input 축약) */
+.qna-write-inp-title {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    font-size: 15px;
+    margin-bottom: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.qna-write-inp-title::placeholder {
+    color: #bbb;
+}
+
+/* qna-write-textarea : 본문 입력창 */
+.qna-write-textarea {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    resize: vertical;
+    font-size: 14px;
+    color: #444;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+}
+
+.qna-write-textarea::placeholder {
+    color: #bbb;
+}
+
+/* qna-write-actions : 제출 버튼 래퍼 */
+.qna-write-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+}

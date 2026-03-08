@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+/* expo-main : 메인 콘텐츠 영역 */
+.expo-main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 48px 60px;
+}
+
+/* expo-cal : 캘린더 섹션 (cal = calendar 축약) */
+.expo-cal {
+    margin-bottom: 60px;
+}
+
+/* expo-cal-hdr : 캘린더 헤더 행 (hdr = header 축약) */
+.expo-cal-hdr {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* expo-cal-month : 월 표시 래퍼 */
+.expo-cal-month {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.expo-cal-year {
+  font-size: 14px;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* expo-cal-month-num : 월 숫자 (큰 폰트) */
+.expo-cal-month-num {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* expo-cal-month-txt : 월 영문 텍스트 */
+.expo-cal-month-txt {
+    font-size: 14px;
+    color: #999;
+    font-weight: 500;
+}
+
+/* expo-cal-btn : 이전/다음 월 이동 버튼 */
+.expo-cal-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+    line-height: 1;
+    padding: 0 4px;
+    margin-bottom: 6px;
+}
+
+.expo-cal-btn:hover {
+    color: #6c7fe8;
+}
+
+/* expo-cal-tbl : 캘린더 테이블 (tbl = table 축약) */
+.expo-cal-tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expo-cal-tbl thead tr {
+    background: #c0392b;
+}
+
+.expo-cal-tbl thead th {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 0 6px 10px;
+    text-align: left;
+}
+
+/* expo-cal-tbl-sun / expo-cal-tbl-sat : 일요일/토요일 헤더 색상 */
+.expo-cal-tbl-sun {
+    color: #ffaaaa !important;
+}
+
+.expo-cal-tbl-sat {
+    color: #aaddff !important;
+}
+
+.expo-cal-tbl tbody td {
+    border-top: 1px solid #e8e8e8;
+    padding: 8px 10px 28px;
+    vertical-align: top;
+    font-size: 13px;
+    width: calc(100% / 7);
+}
+
+/* expo-cal-tbl-day-sun / expo-cal-tbl-day-sat : 날짜 셀 일/토 색상 */
+.expo-cal-tbl-day-sun {
+    color: #c0392b;
+}
+
+.expo-cal-tbl-day-sat {
+    color: #3498db;
+}
+
+/* expo-cal-tbl-day-other : 이전/다음 달 날짜 */
+.expo-cal-tbl-day-other {
+    color: #ccc;
+}
+
+/* expo-cal-tbl-day-today : 오늘 날짜 강조 */
+.expo-cal-tbl-day-today .expo-cal-date-num {
+    background: #c0392b;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* expo-cal-event-dot : 박람회 이벤트 표시 점 */
+.expo-cal-event-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #6c7fe8;
+    border-radius: 50%;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+/* expo-list : 박람회 리스트 섹션 */
+.expo-list-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* expo-list-tabs : 탭 컨테이너 */
+.expo-list-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+/* expo-list-tab : 개별 탭 버튼 */
+.expo-list-tab {
+    padding: 6px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    color: #666;
+}
+
+.expo-list-tab:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+.expo-list-tab:last-child {
+    border-radius: 0 4px 0 0;
+}
+
+/* expo-list-tab-active : 활성 탭 */
+.expo-list-tab-active {
+    background: white;
+    border-bottom: 1px solid white;
+    color: #333;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* expo-list-tbl : 참가기업 테이블 (tbl = table 축약) */
+.expo-list-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+
+.expo-list-tbl thead tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.expo-list-tbl th {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    background: #fafafa;
+}
+
+.expo-list-tbl tbody tr {
+    border-top: 1px solid #eee;
+}
+
+.expo-list-tbl tbody tr:hover {
+    background: #f9f9ff;
+}
+
+.expo-list-tbl td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* expo-list-tbl-job : 모집 직군 셀 강조 */
+.expo-list-tbl-job {
+    font-weight: 700;
+    color: #222;
+}
+
+/* expo-list-notice : 기업 신청 안내 박스 */
+.expo-list-notice {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+    color: #333;
+}

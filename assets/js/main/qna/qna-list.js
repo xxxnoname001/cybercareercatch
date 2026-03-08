@@ -8,6 +8,15 @@ const posts = [
   { id: 5, num: 5, title: '꼬으으응 뭘적지', company: '디노기', date: '260306', views: 195, badge: 'wait' },
 ];
 
+// sessionStorage에서 신규 글 불러오기 (qna-write.js에서 저장)
+const savedPosts = JSON.parse(sessionStorage.getItem('newPosts') || '[]');
+savedPosts.forEach(p => {
+  // 중복 방지: 같은 id가 없을 때만 추가
+  if (!posts.find(existing => existing.id === p.id)) {
+    posts.splice(1, 0, p); // 공지 바로 아래에 삽입
+  }
+});
+
 const ITEMS_PER_PAGE = 10;
 let currentPage = 1;
 let filteredPosts = [...posts];
