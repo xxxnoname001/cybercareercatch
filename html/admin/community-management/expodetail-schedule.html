@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>관리자 페이지</title>
+<link rel="stylesheet" href="/assets/css/admin/community-management/expodetail-schedule.css">
+</head>
+
+<body class="qnaManagement-body">
+
+<div class="qnaManagement-container">
+
+    <!-- 상단 헤더 -->
+    <header class="qnaManagement-top">
+        
+        <div class="qnaManagement-title">관리자 페이지</div>
+
+        <nav class="qnaManagement-menu1">
+            <a href="#">회원 관리</a>
+            <a href="#">메인 관리</a>
+            <a href="#">커뮤니티 관리</a>
+        </nav>
+        
+        <button class="qnaManagement-logout">로그아웃</button>
+
+    </header>
+
+
+    <!-- 메인 영역 -->
+    <main class="qnaManagement-main">
+
+        <!-- 왼쪽 사이드 메뉴 -->
+        <aside class="qnaManagement-leftbar">
+
+            <div class="qnaManagement-left-item qnaManagement-real">
+                박람회 일정 
+            </div>
+
+            <div class="qnaManagement-left-item">
+                자유 게시판
+            </div>
+
+            <div class="qnaManagement-left-item">
+                기업 QnA
+            </div>
+
+        </aside>
+        <section class="expo-content">
+
+<!-- 상단 탭 -->
+<div class="expo-tab">
+
+<div class="expo-tab-item">박람회 일정</div>
+<div class="expo-tab-item real">박람회 일정 관리</div>
+
+</div>
+
+
+<h3 class="expo-title">일정등록</h3>
+
+
+<!-- 테이블 -->
+<div class="expo-table">
+
+<div class="expo-row expo-head">
+<div>번호</div>
+<div>박람회 명</div>
+<div>시작일</div>
+<div>종료일</div>
+<div>장소</div>
+<div>참여기업수</div>
+<div>관리</div>
+</div>
+
+<div class="expo-row">
+<div>9</div>
+<div>제1회 박람회</div>
+<div>2026년01월01일</div>
+<div>2026년01월04일</div>
+<div>서울</div>
+<div>5</div>
+<div>수정 삭제</div>
+</div>
+
+<div class="expo-row">
+<div>9</div>
+<div>제1회 박람회</div>
+<div>2026년01월01일</div>
+<div>2026년01월04일</div>
+<div>서울</div>
+<div>5</div>
+<div>수정 삭제</div>
+</div>
+
+</div>
+
+
+<!-- 등록 폼 -->
+<div class="expo-form">
+
+<div class="form-row">
+<label>제목</label>
+<input type="text">
+</div>
+
+<div class="form-row">
+<label>시작일 종료일</label>
+
+<input type="date">
+<span>-</span>
+<input type="date">
+
+</div>
+
+<div class="form-row">
+<label>장소</label>
+<input type="text">
+</div>
+
+
+<div class="company-input">
+
+<h4>회사 입력</h4>
+
+<input type="text">
+<button>입력</button>
+
+</div>
+
+
+<div class="company-list">
+
+<p>(주) 구글</p>
+<p>(주) 구글</p>
+
+</div>
+
+
+<div class="form-btn">
+
+<button class="save">저장</button>
+<button class="reset">초기화</button>
+
+</div>
+
+</div>
+
+</section>

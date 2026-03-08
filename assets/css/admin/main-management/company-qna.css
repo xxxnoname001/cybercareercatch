@@ -88,88 +88,125 @@
     user-select: none;
 }
 
-/* 오른쪽 영역 */
 
-.qnaManagement-content{
+/* 오른쪽 콘텐츠 */
+
+.qna-content{
 flex:1;
 background:white;
-padding:30px;
+padding:40px;
 }
 
 
-/* 상단 탭 */
+/* 공지 */
 
-.expo-tab{
-display:flex;
-gap:10px;
+.qna-notice-title{
 margin-bottom:20px;
 }
 
-.expo-tab-item{
-flex:1;
+.qna-notice-box{
+width:700px;
+height:200px;
 background:#e6e6e6;
-padding:15px;
-text-align:center;
-cursor:pointer;
 }
 
-.expo-tab-item.real{
-background:white;
-font-weight:bold;
+.qna-notice-btn{
+width:700px;
+text-align:right;
+margin-top:10px;
+}
+
+.qna-notice-btn button{
+background:#6b83d6;
+color:white;
+border:none;
+padding:6px 18px;
+border-radius:4px;
+cursor: pointer;
+}
+
+
+/* 제목 */
+
+.qna-title{
+margin-top:70px;
+margin-bottom:20px;
+}
+
+
+/* 기업 선택 */
+
+.qna-filter{
+margin-bottom:20px;
+}
+
+.qna-filter select{
+height:35px;
+padding:5px 10px;
+border-radius:5px;
 }
 
 
 /* 테이블 */
 
-.expo-table{
+.qna-table{
 width:100%;
 }
 
-.expo-row{
+.qna-row{
 display:flex;
-padding:10px 0;
+padding:12px 0;
 border-bottom:1px solid #ddd;
-text-align:center;
 }
 
-.expo-row div{
-flex:1;
-}
-
-.expo-head{
+.qna-head{
 font-weight:bold;
-background:#f3f3f3;
+border-top:2px solid #333;
 }
+
+
+/* 컬럼 */
+
+.col1{width:80px;}
+.col2{flex:1;}
+.col3{width:120px;}
+.col4{width:120px;}
+.col5{width:80px;}
+.col6{width:100px;text-align:center;}
 
 
 /* 페이지 */
 
-.expo-page{
+.qna-page{
 display:flex;
 justify-content:center;
 gap:10px;
-margin:30px 0;
+margin-top:30px;
 }
 
-.expo-page span{
+.qna-page span{
 cursor:pointer;
 }
 
-.expo-page .active{
+.qna-page .active{
 color:#4c6ef5;
 font-weight:bold;
 }
 
 
-/* 참가기업 */
+/* 삭제 버튼 */
 
-.expo-company{
-margin-top:40px;
+.qna-delete{
+display:flex;
+justify-content:flex-end;
+margin-top:20px;
 }
 
-.company-row{
-display:flex;
-justify-content:space-between;
-padding:10px 0;
-border-bottom:1px solid #eee;
+.qna-delete button{
+background:#d87c7c;
+border:none;
+color:white;
+padding:10px 25px;
+border-radius:5px;
+cursor: pointer;
 }
