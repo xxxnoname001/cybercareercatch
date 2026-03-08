@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--
+  [signup-member.html 클래스 설명]
+  signup-member_body
+  : 페이지 전체 body 스타일을 적용하는 클래스
+  signup-member_page
+  : header / footer 제외한 회원가입 본문 전체 영역
+  signup-member_wrap
+  : 회원가입 폼을 중앙 정렬하고 최대 너비를 잡는 박스
+  signup-member_tit
+  : 회원가입 제목 텍스트 스타일
+  signup-member_form
+  : 회원가입 전체 form 영역
+  signup-member_sec
+  : 각 입력 항목 1줄(이름, 생년월일, 전화번호 등) 단위 섹션
+  signup-member_head
+  : 라벨과 메시지를 가로 정렬하는 상단 영역
+  signup-member_lab
+  : 각 입력 항목의 라벨 텍스트
+  signup-member_req
+  : 필수 입력 표시 * 스타일
+  signup-member_msgs
+  : 에러 / 성공 메시지들을 감싸는 영역
+  signup-member_msg
+  : 메시지 공통 기본 스타일
+    (기본은 display:none 이고 JS에서 보여줄 때 사용)
+  signup-member_msg_err
+  : 에러 메시지 색상 스타일
+  signup-member_msg_ok
+  : 성공 메시지 색상 스타일
+  signup-member_msg_show
+  : JS에서 메시지를 실제로 보이게 할 때 추가하는 상태 클래스
+  signup-member_ctl
+  : input 또는 radio 등을 감싸는 control 영역
+  signup-member_ctl_row
+  : input + 버튼을 한 줄로 배치할 때 추가하는 클래스
+  signup-member_inpbox
+  : input 바깥 테두리 박스
+  signup-member_inp
+  : 실제 입력창 input 요소
+  signup-member_inpbox_err
+  : JS에서 input 박스를 에러 상태로 표시할 때 추가하는 클래스
+  signup-member_inpbox_ok
+  : JS에서 input 박스를 성공 상태로 표시할 때 추가하는 클래스
+  signup-member_btn_sm
+  : 문자인증 / 확인 버튼처럼 오른쪽에 붙는 작은 버튼
+  signup-member_gender
+  : 성별 라디오 그룹 전체 영역
+  signup-member_gender_item
+  : 성별 라디오 1개(남성 / 여성) 묶음
+  signup-member_submit
+  : 최종 회원가입 버튼
+-->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>일반회원가입</title>
+  <link rel="stylesheet" href="../../../assets/css/main/account/signup-member.css" />
+</head>
+
+<!-- signup-member_body : 페이지 전체 기본 배경, 글꼴, 기본 색상 적용 -->
+<body class="signup-member_body">
+  <!-- 공통 header -->
+
+  <!-- signup-member_page : 실제 회원가입 콘텐츠가 들어가는 본문 영역 -->
+  <main class="signup-member_page">
+
+    <!-- signup-member_wrap : 가운데 정렬 + 최대 500px 폼 영역 -->
+    <section class="signup-member_wrap" aria-labelledby="signupMemberTitle">
+
+      <!-- signup-member_tit : 페이지 제목 -->
+      <h1 id="signupMemberTitle" class="signup-member_tit">회원가입</h1>
+
+      <!-- signup-member_form : 일반회원가입 form 전체 -->
+      <form class="signup-member_form" action="#" method="post" novalidate>
+
+        <!-- ===================================================== -->
+        <!-- 이름 -->
+        <!-- signup-member_sec : 입력 항목 1개를 감싸는 섹션 -->
+        <!-- ===================================================== -->
+        <div class="signup-member_sec">
+
+          <!-- signup-member_head : 라벨/메시지 상단 영역 -->
+          <div class="signup-member_head">
+            <!-- signup-member_lab : 라벨 -->
+            <label class="signup-member_lab" for="signupMemberName">
+              이름
+              <!-- signup-member_req : 필수 입력 표시 -->
+              <span class="signup-member_req">*</span>
+            </label>
+          </div>
+
+          <!-- signup-member_ctl : input control 영역 -->
+          <div class="signup-member_ctl">
+            <!--
+              signup-member_inpbox : input 테두리 박스
+              JS에서 에러 시 signup-member_inpbox_err 추가
+              JS에서 성공 시 signup-member_inpbox_ok 추가
+            -->
+            <div class="signup-member_inpbox" id="signupMemberNameBox">
+              <!-- signup-member_inp : 실제 input -->
+              <input
+                class="signup-member_inp"
+                type="text"
+                id="signupMemberName"
+                name="memberName"
+                placeholder="ex) 홍길동"
+                autocomplete="name"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 생년월일 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberBirth">
+              생년월일
+              <span class="signup-member_req">*</span>
+            </label>
+          </div>
+
+          <div class="signup-member_ctl">
+            <div class="signup-member_inpbox" id="signupMemberBirthBox">
+              <input
+                class="signup-member_inp"
+                type="text"
+                id="signupMemberBirth"
+                name="memberBirth"
+                placeholder="ex) 000111"
+                inputmode="numeric"
+                maxlength="6"
+                autocomplete="bday"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 성별 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <span class="signup-member_lab" id="signupMemberGenderLabel">
+              성별
+              <span class="signup-member_req">*</span>
+            </span>
+          </div>
+
+          <div class="signup-member_ctl">
+            <!-- signup-member_gender : 성별 라디오 그룹 -->
+            <div
+              class="signup-member_gender"
+              role="radiogroup"
+              aria-labelledby="signupMemberGenderLabel"
+            >
+              <!-- signup-member_gender_item : 성별 옵션 1개 -->
+              <label class="signup-member_gender_item" for="signupMemberGenderM">
+                <input
+                  type="radio"
+                  id="signupMemberGenderM"
+                  name="memberGender"
+                  value="M"
+                />
+                <span>남성</span>
+              </label>
+
+              <label class="signup-member_gender_item" for="signupMemberGenderF">
+                <input
+                  type="radio"
+                  id="signupMemberGenderF"
+                  name="memberGender"
+                  value="F"
+                />
+                <span>여성</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 전화번호 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberPhone">
+              전화번호
+              <span class="signup-member_req">*</span>
+            </label>
+          </div>
+
+          <!--
+            signup-member_ctl_row
+            : input + 오른쪽 버튼이 한 줄에 배치되는 형태
+          -->
+          <div class="signup-member_ctl signup-member_ctl_row">
+            <div class="signup-member_inpbox" id="signupMemberPhoneBox">
+              <input
+                class="signup-member_inp"
+                type="tel"
+                id="signupMemberPhone"
+                name="memberPhone"
+                placeholder="ex) 01012345678 (- 제외 입력)"
+                inputmode="numeric"
+                maxlength="11"
+                autocomplete="tel"
+              />
+            </div>
+
+            <!-- signup-member_btn_sm : 문자인증 버튼 -->
+            <button
+              type="button"
+              class="signup-member_btn_sm"
+              id="signupMemberSendBtn"
+            >
+              문자인증
+            </button>
+          </div>
+        </div>
+
+        <!-- 인증번호 입력 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberAuthCode">
+              인증번호 입력
+              <span class="signup-member_req">*</span>
+            </label>
+
+            <!-- signup-member_msgs : 인증 관련 메시지 묶음 -->
+            <div class="signup-member_msgs" aria-live="polite">
+
+              <!--
+                signup-member_msg : 메시지 공통
+                signup-member_msg_err : 에러 메시지 색상
+                signup-member_msg_show : JS에서 붙이면 문구 표시
+              -->
+              <span
+                class="signup-member_msg signup-member_msg_err"
+                id="signupMemberAuthErr"
+              >
+                잘못된 인증번호입니다
+              </span>
+
+              <!--
+                signup-member_msg_ok : 성공 메시지 색상
+                signup-member_msg_show : JS에서 붙이면 문구 표시
+              -->
+              <span
+                class="signup-member_msg signup-member_msg_ok"
+                id="signupMemberAuthOk"
+              >
+                인증되었습니다
+              </span>
+            </div>
+          </div>
+
+          <div class="signup-member_ctl signup-member_ctl_row">
+            <div class="signup-member_inpbox" id="signupMemberAuthBox">
+              <input
+                class="signup-member_inp"
+                type="text"
+                id="signupMemberAuthCode"
+                name="memberAuthCode"
+                placeholder="ex) 123456"
+                inputmode="numeric"
+                maxlength="6"
+                autocomplete="one-time-code"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="signup-member_btn_sm"
+              id="signupMemberAuthBtn"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+
+        <!-- 아이디 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberUserId">
+              아이디
+              <span class="signup-member_req">*</span>
+            </label>
+
+            <div class="signup-member_msgs" aria-live="polite">
+              <span
+                class="signup-member_msg signup-member_msg_err"
+                id="signupMemberIdErr"
+              >
+                중복된 아이디입니다
+              </span>
+
+              <span
+                class="signup-member_msg signup-member_msg_ok"
+                id="signupMemberIdOk"
+              >
+                사용 가능한 아이디입니다
+              </span>
+            </div>
+          </div>
+
+          <div class="signup-member_ctl">
+            <div class="signup-member_inpbox" id="signupMemberUserIdBox">
+              <input
+                class="signup-member_inp"
+                type="text"
+                id="signupMemberUserId"
+                name="memberUserId"
+                placeholder="ex) hong1234"
+                maxlength="20"
+                autocomplete="username"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberPwd">
+              비밀번호
+              <span class="signup-member_req">*</span>
+            </label>
+          </div>
+
+          <div class="signup-member_ctl">
+            <div class="signup-member_inpbox" id="signupMemberPwdBox">
+              <input
+                class="signup-member_inp"
+                type="password"
+                id="signupMemberPwd"
+                name="memberPwd"
+                placeholder="ex) hong1234*"
+                autocomplete="new-password"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 비밀번호 재확인 -->
+        <div class="signup-member_sec">
+          <div class="signup-member_head">
+            <label class="signup-member_lab" for="signupMemberPwdRe">
+              비밀번호 재확인
+              <span class="signup-member_req">*</span>
+            </label>
+
+            <div class="signup-member_msgs" aria-live="polite">
+              <span
+                class="signup-member_msg signup-member_msg_err"
+                id="signupMemberPwdErr"
+              >
+                비밀번호가 일치하지 않습니다
+              </span>
+
+              <span
+                class="signup-member_msg signup-member_msg_ok"
+                id="signupMemberPwdOk"
+              >
+                비밀번호가 일치합니다
+              </span>
+            </div>
+          </div>
+
+          <div class="signup-member_ctl signup-member_ctl_row">
+            <div class="signup-member_inpbox" id="signupMemberPwdReBox">
+              <input
+                class="signup-member_inp"
+                type="password"
+                id="signupMemberPwdRe"
+                name="memberPwdRe"
+                placeholder="ex) hong1234*"
+                autocomplete="new-password"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="signup-member_btn_sm"
+              id="signupMemberPwdChkBtn"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+
+        <!-- signup-member_submit : 최종 회원가입 버튼 -->
+        <button
+          type="submit"
+          class="signup-member_submit"
+          id="signupMemberSubmitBtn"
+        >
+          회원가입
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- 공통 footer -->
+</body>
+</html>

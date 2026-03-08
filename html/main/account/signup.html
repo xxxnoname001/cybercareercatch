@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../../../assets/css/main/account/signup.css" />
+</head>
+<body>
+  <!-- 공통 header 영역 -->
+
+  <!--
+     'account_signup_' 접두사로 통일함.
+    
+    * account_signup_container    (전체를 감싸는 컨테이너)
+    * account_signup_inner        (중앙 정렬 이너 박스)
+    * account_signup_breadcrumb   (경로 표시줄)
+    * account_signup_type_section (회원 유형 선택 구역)
+    * account_signup_title_wrap   (제목 영역 랩퍼)
+    * account_signup_deco_line    (제목 양옆 꾸밈 선)
+    * account_signup_title_text   (제목 텍스트)
+    * account_signup_card_group   (선택 카드 묶음)
+    * account_signup_card         (개별 선택 카드)
+    * account_signup_card_icon    (카드 내부 아이콘)
+    * account_signup_card_label   (카드 내부 텍스트)
+  -->
+
+  <!-- 회원가입 전체 영역 -->
+  <main class="account_signup_container">
+    <div class="account_signup_inner">
+      
+      <!-- 경로 표시 (Breadcrumb) -->
+      <nav class="account_signup_breadcrumb" aria-label="breadcrumb">
+        <a href="/" class="account_signup_breadcrumb_link">홈</a>
+        <span class="account_signup_breadcrumb_arrow">&gt;</span>
+        <span class="account_signup_breadcrumb_current" aria-current="page">회원가입</span>
+      </nav>
+
+      <!-- 회원 유형 선택 섹션 -->
+      <section class="account_signup_type_section">
+        
+        <!-- 타이틀 및 장식 선 -->
+        <div class="account_signup_title_wrap">
+          <span class="account_signup_deco_line"></span>
+          <h2 class="account_signup_title_text">회원가입</h2>
+          <span class="account_signup_deco_line"></span>
+        </div>
+
+        <!-- 선택 카드 그룹 -->
+        <div class="account_signup_card_group">
+          <!-- 일반회원 카드 -->
+          <a href="./signup_user.html" class="account_signup_card" aria-label="일반회원 회원가입 페이지로 이동">
+            <div class="account_signup_card_icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="27"></circle>
+                <circle cx="32" cy="25.5" r="7.5"></circle>
+                <path d="M18.5 47c3.6-5.7 8.8-9 13.5-9s9.9 3.3 13.5 9"></path>
+              </svg>
+            </div>
+            <span class="account_signup_card_label">일반회원</span>
+          </a>
+
+          <!-- 기업회원 카드 -->
+          <a href="./signup_company.html" class="account_signup_card" aria-label="기업회원 회원가입 페이지로 이동">
+            <div class="account_signup_card_icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <rect x="14" y="24" width="14" height="26"></rect>
+                <rect x="28" y="12" width="18" height="38"></rect>
+                <rect x="46" y="30" width="12" height="20"></rect>
+
+                <rect x="18" y="30" width="4" height="4"></rect>
+                <rect x="18" y="38" width="4" height="4"></rect>
+
+                <rect x="32" y="18" width="4" height="4"></rect>
+                <rect x="38" y="18" width="4" height="4"></rect>
+                <rect x="32" y="26" width="4" height="4"></rect>
+                <rect x="38" y="26" width="4" height="4"></rect>
+                <rect x="32" y="34" width="4" height="4"></rect>
+                <rect x="38" y="34" width="4" height="4"></rect>
+
+                <rect x="50" y="36" width="4" height="4"></rect>
+                <rect x="50" y="42" width="4" height="4"></rect>
+              </svg>
+            </div>
+            <span class="account_signup_card_label">기업회원</span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 공통 footer 영역 -->
+</body>
+</html>

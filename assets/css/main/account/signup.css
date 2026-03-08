@@ -1,0 +1,204 @@
+  /* <!--
+     'account_signup_' 접두사로 통일함.
+    
+    * account_signup_container    (전체를 감싸는 컨테이너)
+    * account_signup_inner        (중앙 정렬 이너 박스)
+    * account_signup_breadcrumb   (경로 표시줄)
+    * account_signup_type_section (회원 유형 선택 구역)
+    * account_signup_title_wrap   (제목 영역 랩퍼)
+    * account_signup_deco_line    (제목 양옆 꾸밈 선)
+    * account_signup_title_text   (제목 텍스트)
+    * account_signup_card_group   (선택 카드 묶음)
+    * account_signup_card         (개별 선택 카드)
+    * account_signup_card_icon    (카드 내부 아이콘)
+    * account_signup_card_label   (카드 내부 텍스트)
+  --> */
+
+body {
+  margin: 0;
+  background-color: #ffffff !important; /* 다른 CSS에 밀리지 않도록 !important 추가 */
+}
+
+/* 전체 컨테이너 */
+.account_signup_container {
+  padding: 24px 0 140px;
+  background-color: #ffffff; /* 컨테이너 자체에도 흰색 배경 강제 적용 */
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+.account_signup_container * {
+  box-sizing: border-box;
+}
+
+/* 최대 너비 및 중앙 정렬 담당 */
+.account_signup_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 경로 표시줄 (Breadcrumb) */
+.account_signup_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 120px;
+  font-size: 13px;
+  color: #777;
+}
+
+.account_signup_breadcrumb_link {
+  color: #555;
+  text-decoration: none;
+}
+
+.account_signup_breadcrumb_link:hover {
+  text-decoration: underline;
+}
+
+.account_signup_breadcrumb_arrow {
+  color: #999;
+}
+
+.account_signup_breadcrumb_current {
+  color: #666;
+}
+
+/* 회원 유형 선택 섹션 */
+.account_signup_type_section {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* 타이틀 랩퍼 (선 + 글자 + 선) */
+.account_signup_title_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+/* 타이틀 양옆 꾸밈 선 */
+.account_signup_deco_line {
+  flex: 0 1 165px;
+  height: 1px;
+  background-color: #9ea4ad;
+}
+
+/* 회원가입 타이틀 텍스트 */
+.account_signup_title_text {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #6f7784;
+  letter-spacing: -0.03em;
+}
+
+/* 카드 묶음 그룹 */
+.account_signup_card_group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* 개별 카드 (일반회원/기업회원) */
+.account_signup_card {
+  width: 216px;
+  height: 230px;
+  background-color: #ffffff; /* 카드의 배경색도 완전한 흰색으로 일치시킴 */
+  border: 1px solid #9ea8ff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(77, 91, 180, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* 카드 호버(마우스 올렸을 때) 애니메이션 */
+.account_signup_card:hover {
+  transform: translateY(-6px);
+  border-color: #7e89ff;
+  box-shadow: 0 14px 28px rgba(77, 91, 180, 0.18);
+}
+
+/* 웹 접근성 (키보드 탭 이동 시 테두리 강조) */
+.account_signup_card:focus-visible {
+  outline: 3px solid #7e89ff;
+  outline-offset: 4px;
+}
+
+/* 카드 내부 아이콘 랩퍼 */
+.account_signup_card_icon {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 카드 내부 SVG 아이콘 선 색상/굵기 설정 */
+.account_signup_card_icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #222;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 카드 내부 텍스트(일반회원, 기업회원) */
+.account_signup_card_label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================
+   반응형 (모바일, 태블릿 크기 화면)
+   ========================================= */
+@media (max-width: 768px) {
+  .account_signup_container {
+    padding: 20px 0 100px;
+  }
+
+  .account_signup_breadcrumb {
+    margin-bottom: 80px;
+  }
+
+  .account_signup_title_wrap {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .account_signup_deco_line {
+    flex-basis: 90px;
+  }
+
+  .account_signup_title_text {
+    font-size: 24px;
+  }
+
+  .account_signup_card_group {
+    gap: 20px;
+  }
+
+  .account_signup_card {
+    width: 100%;
+    max-width: 280px;
+    height: 210px;
+  }
+
+  .account_signup_card_icon {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 18px;
+  }
+}

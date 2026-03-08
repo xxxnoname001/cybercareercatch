@@ -1,0 +1,294 @@
+
+/* signup-member_body : 페이지 전체 기본 스타일 */
+.signup-member_body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+/* signup-member_body 내부 모든 요소 box-sizing 통일 */
+.signup-member_body *,
+.signup-member_body *::before,
+.signup-member_body *::after {
+  box-sizing: border-box;
+}
+
+/* signup-member_page : 본문 전체 여백 */
+.signup-member_page {
+  padding: 56px 20px 120px;
+}
+
+/* signup-member_wrap : 중앙 정렬 + 최대 500px */
+.signup-member_wrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* signup-member_tit : 제목 스타일 */
+.signup-member_tit {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: #222222;
+}
+
+/* signup-member_form : form 전체를 세로 정렬 */
+.signup-member_form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* signup-member_sec : 항목 1개 단위 묶음 */
+.signup-member_sec {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* signup-member_head : 라벨과 메시지를 정렬하는 상단 영역 */
+.signup-member_head {
+  min-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+}
+
+/* signup-member_lab : 라벨 텍스트 */
+.signup-member_lab {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #2f3440;
+}
+
+/* signup-member_req : 필수 표시 * */
+.signup-member_req {
+  margin-left: 3px;
+  color: #7d84ff;
+}
+
+/* signup-member_msgs : 성공/에러 메시지 묶음 */
+.signup-member_msgs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* signup-member_msg : 메시지 기본값은 숨김 */
+.signup-member_msg {
+  display: none;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* signup-member_msg_show : JS에서 추가하면 메시지 보임 */
+.signup-member_msg_show {
+  display: inline-block;
+}
+
+/* signup-member_msg_err : 에러 메시지 색상 */
+.signup-member_msg_err {
+  color: #ef6f6f;
+}
+
+/* signup-member_msg_ok : 성공 메시지 색상 */
+.signup-member_msg_ok {
+  color: #7d84ff;
+}
+
+/* signup-member_ctl : input, radio, button 정렬용 영역 */
+.signup-member_ctl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* signup-member_ctl_row 안에서는 input 박스가 남은 영역을 차지 */
+.signup-member_ctl_row .signup-member_inpbox {
+  flex: 1 1 auto;
+}
+
+/* signup-member_inpbox : 입력창 외곽 박스 */
+.signup-member_inpbox {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d9deea;
+  border-radius: 3px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* signup-member_inpbox hover 상태 */
+.signup-member_inpbox:hover {
+  border-color: #cdd3e1;
+}
+
+/* signup-member_inpbox focus 상태 */
+.signup-member_inpbox:focus-within {
+  border-color: #7d84ff;
+  box-shadow: 0 0 0 3px rgba(125, 132, 255, 0.12);
+}
+
+/* signup-member_inpbox_err : 에러 상태 input 박스 */
+.signup-member_inpbox_err {
+  border-color: #ef8a8a;
+  background-color: #fffafa;
+}
+
+/* signup-member_inpbox_ok : 성공 상태 input 박스 */
+.signup-member_inpbox_ok {
+  border-color: #7d84ff;
+}
+
+/* signup-member_inp : 실제 input */
+.signup-member_inp {
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 400;
+  color: #222222;
+  font-family: inherit;
+}
+
+/* signup-member_inp placeholder */
+.signup-member_inp::placeholder {
+  color: #c0c6d2;
+}
+
+/* signup-member_btn_sm : 오른쪽 작은 버튼 */
+.signup-member_btn_sm {
+  flex: 0 0 84px;
+  width: 84px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  background-color: #7d84ff;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* signup-member_btn_sm hover */
+.signup-member_btn_sm:hover {
+  background-color: #6d75ff;
+}
+
+/* signup-member_btn_sm active */
+.signup-member_btn_sm:active {
+  transform: translateY(1px);
+}
+
+/* signup-member_gender : 성별 라디오 전체 그룹 */
+.signup-member_gender {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 40px;
+  padding: 0 2px;
+}
+
+/* signup-member_gender_item : 성별 옵션 1개 */
+.signup-member_gender_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555555;
+  cursor: pointer;
+}
+
+/* signup-member_gender_item 내부 라디오 버튼 */
+.signup-member_gender_item input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #7d84ff;
+}
+
+/* signup-member_submit : 최종 회원가입 버튼 */
+.signup-member_submit {
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #7d84ff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* signup-member_submit hover */
+.signup-member_submit:hover {
+  background-color: #6d75ff;
+}
+
+/* signup-member_submit active */
+.signup-member_submit:active {
+  transform: translateY(1px);
+}
+
+/* 버튼 포커스 접근성 처리 */
+.signup-member_btn_sm:focus-visible,
+.signup-member_submit:focus-visible {
+  outline: 3px solid rgba(125, 132, 255, 0.22);
+  outline-offset: 2px;
+}
+
+/* 반응형 처리 */
+@media (max-width: 560px) {
+  /* signup-member_page : 모바일 여백 조정 */
+  .signup-member_page {
+    padding: 40px 16px 90px;
+  }
+
+  /* signup-member_tit : 모바일 제목 크기 조정 */
+  .signup-member_tit {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  /* signup-member_ctl_row : 모바일에서 버튼을 아래로 배치 */
+  .signup-member_ctl_row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* signup-member_btn_sm : 모바일에서 버튼 전체 너비 사용 */
+  .signup-member_btn_sm {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  /* input / 버튼 높이 살짝 증가 */
+  .signup-member_inpbox,
+  .signup-member_btn_sm {
+    height: 42px;
+  }
+
+  /* signup-member_submit : 모바일 버튼 높이 조정 */
+  .signup-member_submit {
+    height: 50px;
+  }
+}

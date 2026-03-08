@@ -1,0 +1,214 @@
+/*
+  =============================================================
+  [클래스명 뜻 안내]
+  * account_login_container  : 로그인 페이지 전체 바탕 영역
+  * account_login_box        : 로고와 폼을 감싸는 중앙 테두리 박스
+  * account_login_logo       : 폼 상단에 위치한 로고 텍스트 영역
+  * account_login_form       : 실제 로그인을 처리하는 폼 영역
+  * account_login_field      : 라벨 + 입력창 묶음 (아이디/비밀번호 각각)
+  * account_login_label      : '아이디', '비밀번호' 텍스트 라벨
+  * account_login_input_wrap : 아이콘과 입력창(input)을 묶는 상자
+  * account_login_icon       : 입력창 왼쪽의 아이콘 (사람/자물쇠)
+  * account_login_input      : 실제 글씨를 입력하는 input 창
+  * account_login_options    : 비밀번호 입력창 하단의 옵션(에러메시지 + 비밀번호 찾기) 묶음
+  * account_login_error      : 로그인 실패 시 보여줄 붉은색 에러 메시지 (기본 숨김)
+  * account_login_find_pw    : 비밀번호 찾기 텍스트 링크
+  * account_login_submit_btn : 파란색 로그인 버튼
+  * account_login_signup_wrap: 하단 회원가입 링크를 감싸는 영역
+  * account_login_signup_link: '회원가입' 텍스트 링크
+  =============================================================
+*/
+
+body {
+  margin: 0;
+  background-color: #f8f9fa; /* 너무 눈부시지 않은 연한 회색 배경 */
+  font-family: "Noto Sans KR", sans-serif;
+  color: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 전체 랩퍼 */
+.account_login_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* 헤더/푸터 제외한 영역 중앙 배치 */
+  padding: 60px 20px;
+}
+
+/* 로그인 폼 전체를 감싸는 테두리 박스 */
+.account_login_box {
+  width: 100%;
+  max-width: 540px;
+  background-color: #ffffff;
+  border: 1px solid #e0e5ed;
+  border-radius: 12px;
+  padding: 50px 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* 폼 상단 로고 */
+.account_login_logo {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+.account_login_logo .logo-strong {
+  color: #001AFF; /* 기존 헤더 로고 색상 통일 */
+  opacity: 1;
+}
+
+.account_login_logo .logo-soft {
+  color: #001AFF;
+  opacity: 0.6;
+}
+
+/* 로그인 폼 영역 */
+.account_login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 각 입력 필드 묶음 */
+.account_login_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 아이디/비밀번호 라벨 */
+.account_login_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* 아이콘과 인풋창을 묶는 상자 */
+.account_login_input_wrap {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
+
+/* 아이콘 설정 */
+.account_login_icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* 실제 입력창 (input) */
+.account_login_input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 0 48px; /* 왼쪽 아이콘 공간 확보 */
+  border: 1px solid #d4d8e2;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #222222;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.account_login_input:focus {
+  border-color: #7c84ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 132, 255, 0.15);
+}
+
+.account_login_input::placeholder {
+  color: #b5b5b5;
+}
+
+/* 에러메시지 및 비밀번호 찾기 묶음 */
+.account_login_options {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+/* 에러 메시지 */
+.account_login_error {
+  font-size: 12px;
+  color: #ef7a7a;
+  display: none; /* 기본 숨김, JS로 display: block 전환하여 사용 */
+}
+
+/* 비밀번호 찾기 링크 */
+.account_login_find_pw {
+  font-size: 12px;
+  color: #666666;
+  text-decoration: underline;
+  margin-left: auto; /* 우측 끝으로 밀기 */
+}
+
+.account_login_find_pw:hover {
+  color: #7c84ff;
+}
+
+/* 로그인 파란색 버튼 */
+.account_login_submit_btn {
+  width: 100%;
+  height: 56px;
+  background-color: #7c84ff; /* 피그마 보라/파란색 톤 맞춤 */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.account_login_submit_btn:hover {
+  background-color: #6c75ff;
+}
+
+/* 회원가입 영역 */
+.account_login_signup_wrap {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.account_login_signup_link {
+  font-size: 14px;
+  color: #555555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.account_login_signup_link:hover {
+  color: #001AFF;
+  text-decoration: underline;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 560px) {
+  .account_login_container {
+    padding: 40px 16px;
+  }
+  
+  .account_login_box {
+    padding: 40px 24px;
+  }
+}
