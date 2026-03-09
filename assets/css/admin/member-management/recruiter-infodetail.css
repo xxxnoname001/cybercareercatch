@@ -16,25 +16,24 @@ align-items:center;
 justify-content:space-between;
 }
 
-/* 기존 div 스타일 유지 */
 .recruiter-infodetail-title {
-    background:#6b83d6;
-    color:white;          /* 이건 a의 글씨 색에도 적용될 예정 */
-    padding:10px 20px;
-    border-radius:6px;
-    font-weight:bold;
-    cursor:pointer;
-    display:inline-block; /* a가 안 깨지도록 */
+background:#6b83d6;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+display:inline-block;
 }
 
-/* a 태그 스타일 초기화 + div 스타일과 동일하게 */
 .recruiter-infodetail-title a {
-    color: inherit;       /* div의 color 상속 */
-    text-decoration: none; /* 밑줄 제거 */
-    display:block;        /* div 안에서 영역 전체 클릭 가능 */
-    width:100%;
-    height:100%;
+color: inherit;
+text-decoration: none;
+display:block;
+width:100%;
+height:100%;
 }
+
 .recruiter-infodetail-menu{
 display:flex;
 gap:40px;
@@ -66,7 +65,7 @@ margin-top:30px;
 gap:20px;
 }
 
-/* 왼쪽 사이드바 */
+/* 사이드바 */
 
 .recruiter-infodetail-sidebar{
 width:200px;
@@ -105,16 +104,13 @@ color:white;
 font-weight:700;
 }
 
-
-/* 오른쪽 콘텐츠 */
+/* 콘텐츠 */
 
 .recruiter-infodetail-content{
 flex:1;
 background:#f5f5f5;
 padding:12px 35px;
 }
-
-/* 상단 제목 */
 
 .recruiter-infodetail-section-header{
 margin-bottom:20px;
@@ -128,6 +124,8 @@ font-size:18px;
 font-weight:bold;
 }
 
+/* 기존 버튼 스타일 */
+/*
 .recruiter-infodetail-move-btn{
 background:#7a88f0;
 color:white;
@@ -135,6 +133,25 @@ border:none;
 padding:8px 14px;
 border-radius:5px;
 cursor:pointer;
+}
+*/
+
+/* 수정된 링크 버튼 스타일 */
+
+.recruiter-infodetail-move-btn{
+display:inline-block;
+background:#6b83d6;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+text-decoration:none;
+cursor:pointer;
+}
+
+/* hover 추가 */
+
+.recruiter-infodetail-move-btn:hover{
+background:#5569c1;
 }
 
 /* 회원 정보 */
@@ -166,7 +183,7 @@ flex:1;
 padding:12px;
 }
 
-/* 로그인 업데이트 */
+/* 로그인 정보 */
 
 .recruiter-infodetail-update{
 margin-top:20px;

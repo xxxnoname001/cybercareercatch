@@ -160,11 +160,21 @@ background:white;
 
 /* 한 줄 */
 
+/* .company-check-row{
+display:flex;
+border-bottom:1px solid #ccc;
+} */
 .company-check-row{
 display:flex;
 border-bottom:1px solid #ccc;
+text-decoration:none;
+color:inherit;
 }
 
+.company-check-row:hover{
+background:#f0f3ff;
+cursor:pointer;
+}
 
 /* 헤더 */
 

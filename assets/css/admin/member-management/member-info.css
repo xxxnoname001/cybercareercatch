@@ -171,6 +171,13 @@ align-items:center;
 justify-content:center;
 }
 
+/* 추가함 */
+.member-info-link-group{
+display:flex;
+flex:1;
+text-decoration:none;
+color:inherit;
+}
 /* 컬럼 너비 */
 
 .member-info-col-num{
