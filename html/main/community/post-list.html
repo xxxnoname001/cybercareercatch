@@ -1,30 +1,164 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자유게시판</title>
   <link rel="stylesheet" href="../../../assets/css/main/community/post-list.css">
 </head>
+
 <body>
-  <main class="qna-list-main">
-    <div class="qna-list-top">
-      <h2 class="qna-list-title">자유게시판</h2>
+  <!--
+    축약어 규칙
+    cml = Community List (커뮤니티 게시글 목록 페이지 공통 prefix)
+    top = 상단 타이틀 영역
+    ttl = title(제목)
+    head = 게시글 목록 헤더 영역
+    row = 게시글 한 줄 영역
+    col = column(열)
+    num = number(번호)
+    wrt = writer(작성자)
+    date = 작성일
+    list = 게시글 목록 묶음 영역
+    pg = pagination(페이지 번호 영역)
+    btn = button(버튼)
+    now = current page(현재 페이지)
+    sch = search(검색 영역)
+    sel = select(검색 조건 선택)
+    inp = input(검색 입력창)
+    write = 글쓰기 이동 버튼
+    link = 게시글 이동 링크
+
+    요약 기준
+    community = cm
+    list = l
+    writer = wrt
+    pagination = pg
+    search = sch
+  -->
+
+  <main class="cml-wrap">
+    <div class="cml-top">
+      <h2 class="cml-top-ttl">자유게시판</h2>
     </div>
 
-    <div class="qna-list-head">
-      <div class="qna-list-col-num">번호</div>
-      <div class="qna-list-col-title">제목</div>
-      <div class="qna-list-col-writer">작성자</div>
-      <div class="qna-list-col-date">작성일</div>
+    <div class="cml-head">
+      <div class="cml-head-col-num">번호</div>
+      <div class="cml-head-col-ttl">제목</div>
+      <div class="cml-head-col-wrt">작성자</div>
+      <div class="cml-head-col-date">작성일</div>
     </div>
 
-    <div id="postList"></div>
+    <div class="cml-list">
+      <!-- 더미데이터//////////////////////////////////////////////////// -->
 
-    <div class="qna-list-pg" id="pagination"></div>
+      <div class="cml-row">
+        <div class="cml-row-col-num">관리자</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-notification.html" class="cml-link">공지사항</a>
+        </div>
+        <div class="cml-row-col-wrt">관리자</div>
+        <div class="cml-row-col-date">260309</div>
+      </div>
 
-    <div class="qna-list-search">
-      <select id="searchType" class="qna-list-search-sel">
+      <div class="cml-row">
+        <div class="cml-row-col-num">9</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 9</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자1</div>
+        <div class="cml-row-col-date">260308</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">8</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 8</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자2</div>
+        <div class="cml-row-col-date">260308</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">7</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 7</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자3</div>
+        <div class="cml-row-col-date">260307</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">6</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 6</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자4</div>
+        <div class="cml-row-col-date">260307</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">5</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 5</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자5</div>
+        <div class="cml-row-col-date">260306</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">4</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 4</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자6</div>
+        <div class="cml-row-col-date">260306</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">3</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 3</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자7</div>
+        <div class="cml-row-col-date">260305</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">2</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 2</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자8</div>
+        <div class="cml-row-col-date">260305</div>
+      </div>
+
+      <div class="cml-row">
+        <div class="cml-row-col-num">1</div>
+        <div class="cml-row-col-ttl">
+          <a href="post-detail.html" class="cml-link">게시물 1</a>
+        </div>
+        <div class="cml-row-col-wrt">사용자9</div>
+        <div class="cml-row-col-date">260304</div>
+      </div>
+
+      <!-- ////////////////////////////////////////////////////////////////// -->
+    </div>
+
+    <div class="cml-pg">
+      <!--  더미 페이지네이션  이후 삭제 예정  -->
+      <a href="#" class="cml-pg-btn">&lt;</a>
+      <a href="#" class="cml-pg-btn">1</a>
+      <a href="#" class="cml-pg-btn">2</a>
+      <a href="#" class="cml-pg-btn">3</a>
+      <a href="#" class="cml-pg-btn">4</a>
+      <a href="#" class="cml-pg-btn">5</a>
+      <a href="#" class="cml-pg-btn">&gt;</a>
+    </div>
+
+    <form action="#" method="get" class="cml-sch">
+      <select name="searchType" class="cml-sch-sel">
         <option value="title">제목</option>
         <option value="writer">작성자</option>
         <option value="content">내용</option>
@@ -32,16 +166,15 @@
 
       <input
         type="text"
-        id="searchInput"
-        class="qna-list-search-inp"
+        name="searchKeyword"
+        class="cml-sch-inp"
         placeholder="검색할 내용을 입력하세요"
       >
 
-      <button type="button" id="btnSearch" class="qna-list-search-btn">검색</button>
-      <a href="add-post.html" class="qna-list-search-btn-write">글쓰기</a>
-    </div>
+      <button type="submit" class="cml-sch-btn">검색</button>
+      <a href="add-post.html" class="cml-sch-write">글쓰기</a>
+    </form>
   </main>
-
-  <script src="../../../assets/js/main/community/post-list.js"></script>
 </body>
+
 </html>

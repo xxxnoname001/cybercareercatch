@@ -1,21 +1,37 @@
 /* 
-  Abbrev(축약어) 규칙
-  fbd = Free Board Detail (이 페이지 공통 prefix)
+  축약어 규칙
+  cmd = Community Detail (커뮤니티 상세 페이지 공통 prefix)
   top = 상단 타이틀 영역
-  ttl = title
-  mv = move button
+  ttl = title(제목)
+  mv = move button(이동 버튼)
   pnl = panel(전체 박스)
   post = 게시글 영역
   head = 게시글 상단 영역
-  info = 작성자/조회수/작성일 영역
-  act = 버튼 영역
-  cont = 내용 영역
+  info = 게시글 정보 영역
+  it = item(단일 항목)
+  act = action button 영역
+  btn = button(버튼)
+  cont = content(내용 영역)
   edit = 수정 영역
-  cmt = 댓글 영역
-  row = 한 줄 영역
-  inp = input
-  ta = textarea
-  btn = button
+  inp = input(입력창)
+  ta = textarea(내용 입력창)
+  cmt = comment(댓글 영역)
+  list = 댓글 목록 영역
+  write = 댓글 작성 영역
+  row = 댓글 한 줄 영역
+  left = 댓글 왼쪽 영역
+  meta = 댓글 작성 정보 영역
+  text = 댓글 내용 영역
+  del = 삭제 버튼
+
+  요약 기준
+  community = cm
+  detail = d
+  information = info
+  comment = cmt
+  input = inp
+  textarea = ta
+  button = btn
 */
 
 * {
@@ -30,13 +46,13 @@ body {
   font-size: 14px;
 }
 
-.fbd-wrap {
+.cmd-wrap {
   width: 1200px;
   margin: 0 auto;
   padding: 50px 0 80px;
 }
 
-.fbd-top {
+.cmd-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,12 +60,12 @@ body {
   margin-bottom: 30px;
 }
 
-.fbd-top-ttl {
+.cmd-top-ttl {
   font-size: 28px;
   font-weight: 700;
 }
 
-.fbd-top-mv {
+.cmd-top-mv {
   background-color: #7d84e6;
   color: white;
   padding: 10px 16px;
@@ -58,7 +74,7 @@ body {
   font-size: 13px;
 }
 
-.fbd-pnl {
+.cmd-pnl {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 12px;
@@ -66,7 +82,7 @@ body {
   padding: 30px;
 }
 
-.fbd-post {
+.cmd-post {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -74,13 +90,13 @@ body {
   padding: 20px;
 }
 
-.fbd-head {
+.cmd-head {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding-bottom: 16px;
 }
 
-.fbd-head-top {
+.cmd-head-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -88,12 +104,12 @@ body {
   margin-bottom: 10px;
 }
 
-.fbd-post-ttl {
+.cmd-post-ttl {
   font-size: 22px;
   font-weight: 700;
 }
 
-.fbd-info {
+.cmd-info {
   width: 100%;
   display: flex;
   align-items: center;
@@ -102,13 +118,13 @@ body {
   color: #666666;
 }
 
-.fbd-act {
+.cmd-act {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.fbd-act-btn {
+.cmd-act-btn {
   border: none;
   border-radius: 6px;
   padding: 8px 14px;
@@ -116,35 +132,31 @@ body {
   font-size: 13px;
 }
 
-.fbd-act-edit {
+.cmd-act-del {
+  background-color: rgb(252, 126, 126);
+}
+
+.cmd-act-save {
   background-color: #7d84e6;
 }
 
-.fbd-act-del {
-  background-color:rgb(252, 126, 126);
-}
-
-.fbd-act-save {
+.cmd-act-cancel {
   background-color: #7d84e6;
 }
 
-.fbd-act-cancel {
-  background-color: #7d84e6;
-}
-
-.fbd-cont {
+.cmd-cont {
   width: 100%;
   min-height: 280px;
   padding: 20px 0;
   line-height: 1.7;
 }
 
-.fbd-edit {
+.cmd-edit {
   width: 100%;
   margin-top: 20px;
 }
 
-.fbd-edit-inp {
+.cmd-edit-inp {
   width: 100%;
   height: 48px;
   padding: 0 14px;
@@ -154,7 +166,7 @@ body {
   margin-bottom: 12px;
 }
 
-.fbd-edit-ta {
+.cmd-edit-ta {
   width: 100%;
   height: 260px;
   padding: 14px;
@@ -164,7 +176,7 @@ body {
   font-size: 14px;
 }
 
-.fbd-cmt {
+.cmd-cmt {
   width: 100%;
   margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0.4);
@@ -173,11 +185,11 @@ body {
   padding: 20px;
 }
 
-.fbd-cmt-list {
+.cmd-cmt-list {
   width: 100%;
 }
 
-.fbd-cmt-write {
+.cmd-cmt-write {
   width: 100%;
   display: flex;
   align-items: center;
@@ -185,7 +197,7 @@ body {
   margin-top: 16px;
 }
 
-.fbd-cmt-inp {
+.cmd-cmt-inp {
   width: 100%;
   height: 42px;
   padding: 0 14px;
@@ -194,7 +206,7 @@ body {
   font-size: 14px;
 }
 
-.fbd-cmt-btn {
+.cmd-cmt-btn {
   width: 70px;
   height: 42px;
   border: none;
@@ -204,9 +216,7 @@ body {
   font-size: 13px;
 }
 
-
-.fd-comment-row,
-.fbd-cmt-row {
+.cmd-cmt-row {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -215,27 +225,23 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.fd-comment-left,
-.fbd-cmt-left {
+.cmd-cmt-left {
   width: 92%;
 }
 
-.fd-comment-meta,
-.fbd-cmt-meta {
+.cmd-cmt-meta {
   font-size: 12px;
   color: #666666;
   margin-bottom: 6px;
 }
 
-.fd-comment-text,
-.fbd-cmt-text {
+.cmd-cmt-text {
   font-size: 14px;
   color: black;
   line-height: 1.6;
 }
 
-.fd-comment-del,
-.fbd-cmt-del {
+.cmd-cmt-del {
   border: none;
   background-color: white;
   color: #7d84e6;

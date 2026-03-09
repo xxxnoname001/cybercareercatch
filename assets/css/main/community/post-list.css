@@ -1,178 +1,211 @@
+/* 
+  축약어 규칙
+  cml = Community List (커뮤니티 게시글 목록 페이지 공통 prefix)
+  top = 상단 타이틀 영역
+  ttl = title(제목)
+  head = 게시글 목록 헤더 영역
+  row = 게시글 한 줄 영역
+  col = column(열)
+  num = number(번호)
+  wrt = writer(작성자)
+  date = 작성일
+  list = 게시글 목록 묶음 영역
+  pg = pagination(페이지 번호 영역)
+  btn = button(버튼)
+  now = current page(현재 페이지)
+  sch = search(검색 영역)
+  sel = select(검색 조건 선택)
+  inp = input(검색 입력창)
+  write = 글쓰기 이동 버튼
+  link = 게시글 이동 링크
+
+  요약 기준
+  community = cm
+  list = l
+  writer = wrt
+  pagination = pg
+  search = sch
+*/
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 14px;
-    color: black;
-    background-color: white;
+  background-color: white;
+  color: black;
+  font-size: 14px;
 }
 
-.qna-list-main {
-    width: 780px;
-    margin: 0 auto;
-    padding: 30px 20px;
+.cml-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 80px;
 }
 
-.qna-list-top {
-    margin-bottom: 20px;
+.cml-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.qna-list-title {
-    font-size: 22px;
-    font-weight: bold;
+.cml-top-ttl {
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.qna-list-tbl {
-    width: 100%;
-    margin-bottom: 20px;
-    border-top: 2px solid gray;
+.cml-head {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #7d84e6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.qna-list-tbl th {
-    padding: 10px;
-    border-bottom: 1px solid gray;
-    font-size: 13px;
-    color: gray;
-    text-align: center;
+.cml-head-col-num {
+  width: 10%;
+  text-align: center;
+  font-weight: 700;
 }
 
-.qna-list-tbl td {
-    padding: 10px;
-    border-bottom: 1px solid lightgray;
-    text-align: center;
+.cml-head-col-ttl {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 10px;
 }
 
-.qna-list-tbl td a {
-    color: black;
-    text-decoration: none;
+.cml-head-col-wrt {
+  width: 15%;
+  text-align: center;
+  font-weight: 700;
 }
 
-.qna-list-tbl td a:hover {
-    text-decoration: underline;
+.cml-head-col-date {
+  width: 20%;
+  text-align: center;
+  font-weight: 700;
 }
 
-.qna-list-tbl-num {
-    width: 70px;
+.cml-list {
+  width: 100%;
+  min-height: auto;
 }
 
-.qna-list-pg {
-    text-align: center;
-    margin: 20px 0;
+.cml-row {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.qna-list-pg button {
-    padding: 5px 10px;
-    margin: 0 3px;
-    border: 1px solid gray;
-    background-color: white;
-    color: black;
+.cml-row-col-num {
+  width: 10%;
+  text-align: center;
 }
 
-.qna-list-pg button:hover {
-    background-color: whitesmoke;
+.cml-row-col-ttl {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
 }
 
-.qna-list-pg-active {
-    background-color: #7d84e6;
-    color: white;
-    border: 1px solid #7d84e6;
+.cml-row-col-wrt {
+  width: 15%;
+  text-align: center;
 }
 
-.qna-list-search {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
+.cml-row-col-date {
+  width: 20%;
+  text-align: center;
 }
 
-.qna-list-search-sel {
-    width: 80px;
-    height: 36px;
-    padding: 0 8px;
-    border: 1px solid gray;
-    background-color: white;
-    color: black;
+.cml-link {
+  color: black;
+  text-decoration: none;
 }
 
-.qna-list-search-inp {
-    width: 220px;
-    height: 36px;
-    padding: 0 10px;
-    border: 1px solid gray;
+.cml-pg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
 }
 
-.qna-list-search-btn {
-    width: 60px;
-    height: 36px;
-    border: 1px solid gray;
-    background-color: white;
-    color: black;
+.cml-pg-btn {
+  width: 34px;
+  height: 34px;
+  /* border: 1px solid rgba(0, 0, 0, 0.4); */
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.qna-list-search-btn:hover {
-    background-color: whitesmoke;
+.cml-pg-now {
+  background-color: #7d84e6;
+  color: white;
+  border: 1px solid #7d84e6;
 }
 
-.qna-list-search-btn-write {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 36px;
-    border: 1px solid #7d84e6;
-    background-color: #7d84e6;
-    color: white;
-    text-decoration: none;
+.cml-sch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
 }
 
-.qna-list-search-btn-write:hover {
-    background-color: #7d84e6;
+.cml-sch-sel {
+  width: 110px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
 }
 
-.qna-list-head {
-    display: flex;
-    border-top: 2px solid gray;
-    border-bottom: 1px solid gray;
-    padding: 10px 0;
-    font-size: 13px;
-    color: gray;
-    text-align: center;
+.cml-sch-inp {
+  width: 320px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
 }
 
-.qna-list-row {
-    display: flex;
-    border-bottom: 1px solid lightgray;
-    padding: 10px 0;
-    text-align: center;
+.cml-sch-btn {
+  width: 80px;
+  height: 38px;
+  background-color: #7d84e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
 }
 
-.qna-list-col-num {
-    width: 80px;
-}
-
-.qna-list-col-title {
-    flex: 1;
-    text-align: left;
-    padding: 0 10px;
-}
-
-.qna-list-col-title a {
-    color: black;
-    text-decoration: none;
-}
-
-.qna-list-col-title a:hover {
-    text-decoration: underline;
-}
-
-.qna-list-col-writer {
-    width: 100px;
-}
-
-.qna-list-col-date {
-    width: 100px;
+.cml-sch-write {
+  width: 80px;
+  height: 38px;
+  background-color: #7d84e6;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -10,49 +10,62 @@
 
 <body>
   <!--
-    Abbrev(축약어) 규칙
-    fbw = Free Board Write (이 페이지 공통 prefix)
+    축약어 규칙
+    cmw = Community Write (커뮤니티 글쓰기 페이지 공통 prefix)
     top = 상단 타이틀 영역
-    ttl = title
-    mv = move button
+    ttl = title(제목)
+    mv = move button(이동 버튼)
     pnl = panel(전체 박스)
+    frm = form(입력 폼 영역)
     row = 한 줄 영역
-    lbl = label
-    inp = input
-    ta = textarea
+    lbl = label(라벨)
+    inp = input(입력창)
+    ta = textarea(내용 입력창)
     btm = 하단 버튼 영역
-    btn = 버튼
+    btn = button(버튼)
+
+    요약 기준
+    community = cm
+    write = w
+    form = frm
+    input = inp
+    textarea = ta
+    button = btn
   -->
 
-  <main class="fbw-wrap">
-    <div class="fbw-top">
-      <h2 class="fbw-top-ttl">자유게시판</h2>
-      <a href="post-list.html" class="fbw-top-mv">자유게시판으로 이동</a>
+  <main class="cmw-wrap">
+    <div class="cmw-top">
+      <h2 class="cmw-top-ttl">자유게시판</h2>
+      <a href="post-list.html" class="cmw-top-mv">자유게시판으로 이동</a>
     </div>
 
-    <div class="fbw-pnl">
-      <div class="fbw-row">
-        <label class="fbw-lbl" for="postTitle">제목</label>
-        <input
-          type="text"
-          id="postTitle"
-          class="fbw-inp"
-          placeholder="게시글 제목을 입력해주세요."
-        >
-      </div>
+    <div class="cmw-pnl">
+      <form action="#" method="post" class="cmw-frm">
+        <div class="cmw-row">
+          <label class="cmw-lbl" for="postTitle">제목</label>
+          <input
+            type="text"
+            id="postTitle"
+            name="postTitle"
+            class="cmw-inp"
+            placeholder="게시글 제목을 입력해주세요."
+          >
+        </div>
 
-      <div class="fbw-row">
-        <label class="fbw-lbl" for="postContent">내용</label>
-        <textarea
-          id="postContent"
-          class="fbw-ta"
-          placeholder="자유롭게 내용을 입력하세요"
-        ></textarea>
-      </div>
+        <div class="cmw-row">
+          <label class="cmw-lbl" for="postContent">내용</label>
+          <textarea
+            id="postContent"
+            name="postContent"
+            class="cmw-ta"
+            placeholder="자유롭게 내용을 입력하세요"
+          ></textarea>
+        </div>
 
-      <div class="fbw-btm">
-        <button type="button" class="fbw-btn" id="savePostBtn">등록완료</button>
-      </div>
+        <div class="cmw-btm">
+          <button type="submit" class="cmw-btn" id="savePostBtn">등록완료</button>
+        </div>
+      </form>
     </div>
   </main>
 

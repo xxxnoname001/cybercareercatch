@@ -10,68 +10,77 @@
 
 <body>
   <!--
-    Abbrev(축약어) 규칙
-    fbd = Free Board Detail (이 페이지 공통 prefix)
+    축약어 규칙
+    cmd = Community Detail (커뮤니티 상세 페이지 공통 prefix)
     top = 상단 타이틀 영역
-    ttl = title
-    mv = move button
+    ttl = title(제목)
+    mv = move button(이동 버튼)
     pnl = panel(전체 박스)
     post = 게시글 영역
     head = 게시글 상단 영역
-    info = 작성자/조회수/작성일 영역
-    act = 버튼 영역
-    cont = 내용 영역
+    info = 게시글 정보 영역
+    it = item(단일 항목)
+    act = action button 영역
+    btn = button(버튼)
+    cont = content(내용 영역)
     edit = 수정 영역
-    cmt = 댓글 영역
-    row = 한 줄 영역
-    inp = input
-    ta = textarea
-    btn = button
+    inp = input(입력창)
+    ta = textarea(내용 입력창)
+    cmt = comment(댓글 영역)
+    list = 댓글 목록 영역
+    write = 댓글 작성 영역
+
+    요약 기준
+    community = cm
+    detail = d
+    information = info
+    comment = cmt
+    input = inp
+    textarea = ta
+    button = btn
   -->
 
-  <main class="fbd-wrap">
-    <div class="fbd-top">
-      <h2 class="fbd-top-ttl">자유게시판</h2>
-      <a href="post-list.html" class="fbd-top-mv">자유게시판 목록으로 이동하기</a>
+  <main class="cmd-wrap">
+    <div class="cmd-top">
+      <h2 class="cmd-top-ttl">자유게시판</h2>
+      <a href="post-list.html" class="cmd-top-mv">자유게시판 목록으로 이동하기</a>
     </div>
 
-    <div class="fbd-pnl">
-      <div class="fbd-post">
-        <div class="fbd-head">
-          <div class="fbd-head-top">
-            <div class="fbd-post-ttl" id="postTitleView">제목</div>
+    <div class="cmd-pnl">
+      <div class="cmd-post">
+        <div class="cmd-head">
+          <div class="cmd-head-top">
+            <div class="cmd-post-ttl" id="cmdPostTitle">제목</div>
 
-            <div class="fbd-act" id="postActions">
-            
-              <button type="button" class="fbd-act-btn fbd-act-del" id="btnDelete">삭제</button>
-
-              <button type="button" class="fbd-act-btn fbd-act-save" id="btnSave" style="display:none;">저장</button>
-              <button type="button" class="fbd-act-btn fbd-act-cancel" id="btnCancel" style="display:none;">취소</button>
+            <div class="cmd-act" id="cmdPostActions">
+              <button type="button" class="cmd-act-btn cmd-act-del" id="cmdBtnDelete">삭제</button>
+              <button type="submit" form="cmdEditForm" class="cmd-act-btn cmd-act-save" id="cmdBtnSave" style="display:none;">저장</button>
+              <button type="button" class="cmd-act-btn cmd-act-cancel" id="cmdBtnCancel" style="display:none;">취소</button>
             </div>
           </div>
 
-          <div class="fbd-info">
-            <div class="fbd-info-it" id="postWriter">ID :</div>
-            <div class="fbd-info-it" id="postViews">| 조회수 :</div>
-            <div class="fbd-info-it" id="postDate">| 작성일 :</div>
+          <div class="cmd-info">
+            <div class="cmd-info-it" id="cmdPostWriter">ID :kdt</div>
+            <div class="cmd-info-it" id="cmdPostViews">| 조회수 : 232332</div>
+            <div class="cmd-info-it" id="cmdPostDate">| 작성일 : 20260309</div>
           </div>
         </div>
 
-        <div class="fbd-cont" id="postContentView">내용</div>
+        <div class="cmd-cont" id="cmdPostContent">내용</div>
 
-        <div class="fbd-edit" id="editArea" style="display:none;">
-          <input type="text" id="editTitle" class="fbd-edit-inp" placeholder="제목">
-          <textarea id="editContent" class="fbd-edit-ta" placeholder="내용"></textarea>
-        </div>
+        <form action="#" method="post" class="cmd-edit" id="cmdEditForm" style="display:none;">
+          <input type="text" id="cmdEditTitle" class="cmd-edit-inp" name="editTitle" placeholder="제목">
+          <textarea id="cmdEditContent" class="cmd-edit-ta" name="editContent" placeholder="내용"></textarea>
+        </form>
       </div>
 
-      <div class="fbd-cmt">
-        <div class="fbd-cmt-list" id="commentList"></div>
+      <div class="cmd-cmt">
+        <div class="cmd-cmt-list" id="cmdCommentList"></div>
 
-        <div class="fbd-cmt-write">
-          <input type="text" id="commentInput" class="fbd-cmt-inp" placeholder="댓글을 작성해주세요">
-          <button type="button" id="btnComment" class="fbd-cmt-btn">입력</button>
-        </div>
+        <form action="#" method="post" class="cmd-cmt-write" id="cmdCommentForm">
+          <input type="text" id="cmdCommentInput" class="cmd-cmt-inp" name="commentInput" placeholder="댓글을 작성해주세요">
+          <button type="submit" id="cmdBtnComment" class="cmd-cmt-btn">입력</button>
+        </form>
       </div>
     </div>
   </main>

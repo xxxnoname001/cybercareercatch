@@ -1,15 +1,23 @@
 /* 
-  Abbrev(축약어) 규칙
-  ntd = Notice Detail (이 페이지 공통 prefix)
+  축약어 규칙
+  cnd = Community Notice Detail (커뮤니티 공지 상세 페이지 공통 prefix)
   top = 상단 타이틀 영역
-  ttl = title
-  mv = move button
+  ttl = title(제목)
+  mv = move button(이동 버튼)
   pnl = panel(전체 박스)
   head = 상단 정보 영역
   info = 작성자/날짜/조회수 영역
+  it = item(단일 항목)
   cont = 본문 영역
   btm = 하단 버튼 영역
-  btn = 버튼
+  btn = button(버튼)
+
+  요약 기준
+  community = c
+  notice = n
+  detail = d
+  information = info
+  button = btn
 */
 
 * {
@@ -24,13 +32,13 @@ body {
   font-size: 14px;
 }
 
-.ntd-wrap {
+.cnd-wrap {
   width: 1200px;
   margin: 0 auto;
   padding: 50px 0 80px;
 }
 
-.ntd-top {
+.cnd-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -38,12 +46,12 @@ body {
   margin-bottom: 30px;
 }
 
-.ntd-top-ttl {
+.cnd-top-ttl {
   font-size: 28px;
   font-weight: 700;
 }
 
-.ntd-top-mv {
+.cnd-top-mv {
   background-color: #7d84e6;
   color: white;
   padding: 10px 16px;
@@ -52,7 +60,7 @@ body {
   font-size: 13px;
 }
 
-.ntd-pnl {
+.cnd-pnl {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 12px;
@@ -60,20 +68,20 @@ body {
   padding: 35px 30px 30px;
 }
 
-.ntd-head {
+.cnd-head {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding-bottom: 18px;
   margin-bottom: 20px;
 }
 
-.ntd-head-ttl {
+.cnd-head-ttl {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.ntd-head-info {
+.cnd-head-info {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -81,7 +89,7 @@ body {
   color: #666666;
 }
 
-.ntd-cont {
+.cnd-cont {
   width: 100%;
   min-height: 340px;
   border: 1px solid rgba(0, 0, 0, 0.4);
@@ -91,7 +99,7 @@ body {
   line-height: 1.7;
 }
 
-.ntd-btm {
+.cnd-btm {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -99,7 +107,7 @@ body {
   margin-top: 20px;
 }
 
-.ntd-btn {
+.cnd-btn {
   background-color: #7d84e6;
   color: white;
   padding: 8px 14px;

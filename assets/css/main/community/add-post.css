@@ -1,16 +1,25 @@
 /* 
-  Abbrev(축약어) 규칙
-  fbw = Free Board Write (이 페이지 공통 prefix)
+  축약어 규칙
+  cmw = Community Write (커뮤니티 글쓰기 페이지 공통 prefix)
   top = 상단 타이틀 영역
-  ttl = title
-  mv = move button
+  ttl = title(제목)
+  mv = move button(이동 버튼)
   pnl = panel(전체 박스)
+  frm = form(입력 폼 영역)
   row = 한 줄 영역
-  lbl = label
-  inp = input
-  ta = textarea
+  lbl = label(라벨)
+  inp = input(입력창)
+  ta = textarea(내용 입력창)
   btm = 하단 버튼 영역
-  btn = 버튼
+  btn = button(버튼)
+
+  요약 기준
+  community = cm
+  write = w
+  form = frm
+  input = inp
+  textarea = ta
+  button = btn
 */
 
 * {
@@ -25,13 +34,13 @@ body {
   font-size: 14px;
 }
 
-.fbw-wrap {
+.cmw-wrap {
   width: 1200px;
   margin: 0 auto;
   padding: 50px 0 80px;
 }
 
-.fbw-top {
+.cmw-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -39,12 +48,12 @@ body {
   margin-bottom: 30px;
 }
 
-.fbw-top-ttl {
+.cmw-top-ttl {
   font-size: 28px;
   font-weight: 700;
 }
 
-.fbw-top-mv {
+.cmw-top-mv {
   background-color: #7d84e6;
   color: white;
   padding: 10px 16px;
@@ -53,7 +62,7 @@ body {
   font-size: 13px;
 }
 
-.fbw-pnl {
+.cmw-pnl {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 12px;
@@ -61,19 +70,19 @@ body {
   padding: 35px 30px 30px;
 }
 
-.fbw-row {
+.cmw-row {
   width: 100%;
   margin-bottom: 25px;
 }
 
-.fbw-lbl {
+.cmw-lbl {
   display: block;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.fbw-inp {
+.cmw-inp {
   width: 100%;
   height: 48px;
   padding: 0 14px;
@@ -82,12 +91,12 @@ body {
   font-size: 14px;
 }
 
-.fbw-inp:focus {
+.cmw-inp:focus {
   outline: none;
   border: 1px solid #7d84e6;
 }
 
-.fbw-ta {
+.cmw-ta {
   width: 100%;
   height: 420px;
   padding: 14px;
@@ -97,12 +106,12 @@ body {
   font-size: 14px;
 }
 
-.fbw-ta:focus {
+.cmw-ta:focus {
   outline: none;
   border: 1px solid #7d84e6;
 }
 
-.fbw-btm {
+.cmw-btm {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -110,11 +119,15 @@ body {
   margin-top: 10px;
 }
 
-.fbw-btn {
+.cmw-btn {
   background-color: #7d84e6;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 10px 18px;
   font-size: 13px;
+}
+
+.cmw-frm {
+  width: 100%;
 }
