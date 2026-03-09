@@ -6,24 +6,74 @@
   <title>기업 회원가입</title>
   <link rel="stylesheet" href="../../../assets/css/main/account/signup-company.css" />
 </head>
-<body class="company-signup-body">
-  <!-- 공통 header -->
+<body class="account_signup_company_body">
+  <!-- 공통 header 영역 -->
 
-  <main class="corp-join-page">
-    <section class="corp-join-wrap" aria-labelledby="corpJoinTitle">
-      <h1 id="corpJoinTitle" class="corp-join-title">기업 회원가입</h1>
+  <!--
+    =============================================================
+    [클래스명 뜻 안내 (전체 목록)]
+    * account_signup_company_body : 기업회원가입 페이지 전체 배경 영역 (body 태그용)
+    * account_signup_company_page : 상하좌우 여백을 잡아주는 메인 컨텐츠 구역 (main 태그용)
+    * account_signup_company_inner : 경로 표시줄 등 전체 요소를 감싸는 중앙 정렬 박스
+    * account_signup_company_path : 상단 경로 표시줄 (홈 > 회원가입 > 기업약관동의 > 기업회원가입)
+    * account_signup_company_path_link : 경로 표시줄 내의 클릭 가능한 링크 (홈, 회원가입, 기업약관동의)
+    * account_signup_company_path_arrow : 경로 구분 화살표 (>)
+    * account_signup_company_path_current : 현재 위치 텍스트 (기업회원가입)
+    * account_signup_company_wrap : 폼 컨텐츠를 화면 중앙에 묶어주는 박스 (section 태그용)
+    * account_signup_company_title : '기업 회원가입' 최상단 큰 제목 (h1 태그용)
+    * account_signup_company_form : 여러 입력란들을 하나로 묶는 폼 전체 (form 태그용)
+    * account_signup_company_field : 라벨 + 입력칸 1개를 한 세트로 묶은 구역 (각 입력 항목 단위)
+    * account_signup_company_head : 라벨과 상태 메시지가 가로로 놓이는 윗부분
+    * account_signup_company_lbl : 입력 항목 이름 (예: 기업명, 아이디 등)
+    * account_signup_company_req : 필수 입력을 뜻하는 파란색 별표(*) 기호
+    * account_signup_company_ctrl : 실제 입력박스와 우측 버튼을 가로로 묶는 영역
+    * has-btn : 우측에 버튼이 있는 입력 컨트롤 영역에 추가되는 클래스 (입력박스와 버튼 너비 조절용)
+    * account_signup_company_box : 테두리가 쳐져 있는 실제 입력(인풋) 박스 래퍼
+    * is-error : 입력 에러 발생 시 박스 테두리와 배경색을 붉은색으로 변경하는 클래스
+    * is-success : 입력 성공 시 박스 테두리를 파란색으로 변경하는 클래스
+    * has-icon : 박스 내부에 아이콘이 포함될 때 좌측 패딩을 추가하는 클래스
+    * account_signup_company_icon : 입력 박스 안쪽 왼쪽에 들어가는 아이콘 (사람, 자물쇠 등)
+    * account_signup_company_btn : '인증요청', '확인' 등에 쓰이는 우측의 작은 파란색 버튼
+    * account_signup_company_msg : 에러/성공 등을 알려주는 안내 텍스트 (기본 숨김)
+    * is-show : 안내 텍스트를 화면에 표시하는 클래스
+    * is-error (msg 용) : 안내 텍스트 색상을 붉은색으로 설정 (예: 잘못된 인증번호입니다)
+    * is-success (msg 용) : 안내 텍스트 색상을 파란색으로 설정 (예: 인증이 완료되었습니다)
+    * account_signup_company_help : 입력창 바로 밑에 항상 떠 있는 회색 도움말 (예: 영문, 숫자, 특수문자 포함 8자 이상...)
+    * account_signup_company_submit : 제일 아래 배치되는 꽉 차는 최종 '회원가입' 버튼
+    =============================================================
+  -->
 
-      <form class="corp-join-form" action="#" method="post" novalidate>
+  <main class="account_signup_company_page">
+    
+    <!-- 경로 표시줄 (path) -->
+    <div class="account_signup_company_inner">
+      <nav class="account_signup_company_path" aria-label="path">
+        <a href="/" class="account_signup_company_path_link">홈</a>
+        <span class="account_signup_company_path_arrow">&gt;</span>
+        <a href="/" class="account_signup_company_path_link">회원가입</a>
+        <span class="account_signup_company_path_arrow">&gt;</span>
+        <a href="/" class="account_signup_company_path_link">기업회원가입 약관동의</a>
+        <span class="account_signup_company_path_arrow">&gt;</span>
+        <span class="account_signup_company_path_current">기업회원가입</span>
+      </nav>
+    </div>
+
+    <section class="account_signup_company_wrap" aria-labelledby="corpJoinTitle">
+      <h1 id="corpJoinTitle" class="account_signup_company_title">기업 회원가입</h1>
+
+      <!-- action에 회원가입 완료 페이지 경로 지정 (임시로 / 설정) -->
+      <form class="account_signup_company_form" action="/" method="get" novalidate>
+        
         <!-- 기업명 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="companyName">
-              기업명<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="companyName">
+              기업명<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox" id="companyNameBox">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box" id="companyNameBox">
               <input
                 type="text"
                 id="companyName"
@@ -36,15 +86,15 @@
         </div>
 
         <!-- 사업자등록번호 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="businessNumber">
-              사업자등록번호<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="businessNumber">
+              사업자등록번호<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox" id="businessNumberBox">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box" id="businessNumberBox">
               <input
                 type="text"
                 id="businessNumber"
@@ -58,15 +108,15 @@
         </div>
 
         <!-- 기업 주소 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="companyAddress">
-              기업 주소<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="companyAddress">
+              기업 주소<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox" id="companyAddressBox">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box" id="companyAddressBox">
               <input
                 type="text"
                 id="companyAddress"
@@ -79,15 +129,15 @@
         </div>
 
         <!-- 담당자 이름 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="managerName">
-              담당자 이름<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="managerName">
+              담당자 이름<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox" id="managerNameBox">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box" id="managerNameBox">
               <input
                 type="text"
                 id="managerName"
@@ -100,15 +150,15 @@
         </div>
 
         <!-- 담당자 전화번호 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="managerPhone">
-              담당자 전화번호<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="managerPhone">
+              담당자 전화번호<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control corp-control--with-btn">
-            <div class="corp-inputbox" id="managerPhoneBox">
+          <div class="account_signup_company_ctrl has-btn">
+            <div class="account_signup_company_box" id="managerPhoneBox">
               <input
                 type="tel"
                 id="managerPhone"
@@ -119,30 +169,30 @@
                 autocomplete="tel"
               />
             </div>
-            <button type="button" class="corp-action-btn" id="requestSmsBtn">
+            <button type="button" class="account_signup_company_btn" id="requestSmsBtn">
               인증요청
             </button>
           </div>
         </div>
 
         <!-- 인증번호 입력 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="authCode">
-              인증번호 입력<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="authCode">
+              인증번호 입력<span class="account_signup_company_req">*</span>
             </label>
 
             <!-- JS 연결 시 is-show 추가 -->
-            <span class="corp-feedback corp-feedback--error" id="authCodeErrorMsg">
+            <span class="account_signup_company_msg is-error" id="authCodeErrorMsg">
               잘못된 인증번호입니다
             </span>
-            <span class="corp-feedback corp-feedback--success" id="authCodeSuccessMsg">
+            <span class="account_signup_company_msg is-success" id="authCodeSuccessMsg">
               인증이 완료되었습니다
             </span>
           </div>
 
-          <div class="corp-control corp-control--with-btn">
-            <div class="corp-inputbox" id="authCodeBox">
+          <div class="account_signup_company_ctrl has-btn">
+            <div class="account_signup_company_box" id="authCodeBox">
               <input
                 type="text"
                 id="authCode"
@@ -153,31 +203,31 @@
                 autocomplete="one-time-code"
               />
             </div>
-            <button type="button" class="corp-action-btn" id="verifyAuthCodeBtn">
+            <button type="button" class="account_signup_company_btn" id="verifyAuthCodeBtn">
               확인
             </button>
           </div>
         </div>
 
         <!-- 아이디 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="userId">
-              아이디<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="userId">
+              아이디<span class="account_signup_company_req">*</span>
             </label>
 
             <!-- JS 연결 시 둘 중 하나만 is-show -->
-            <span class="corp-feedback corp-feedback--error" id="userIdErrorMsg">
+            <span class="account_signup_company_msg is-error" id="userIdErrorMsg">
               중복된 아이디입니다
             </span>
-            <span class="corp-feedback corp-feedback--success" id="userIdSuccessMsg">
+            <span class="account_signup_company_msg is-success" id="userIdSuccessMsg">
               사용 가능한 아이디입니다
             </span>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox corp-inputbox--icon" id="userIdBox">
-              <span class="corp-inputbox__icon" aria-hidden="true">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box has-icon" id="userIdBox">
+              <span class="account_signup_company_icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <circle cx="12" cy="8" r="4"></circle>
                   <path d="M4 20a8 8 0 0 1 16 0"></path>
@@ -196,16 +246,16 @@
         </div>
 
         <!-- 비밀번호 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="password">
-              비밀번호<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="password">
+              비밀번호<span class="account_signup_company_req">*</span>
             </label>
           </div>
 
-          <div class="corp-control">
-            <div class="corp-inputbox corp-inputbox--icon" id="passwordBox">
-              <span class="corp-inputbox__icon" aria-hidden="true">
+          <div class="account_signup_company_ctrl">
+            <div class="account_signup_company_box has-icon" id="passwordBox">
+              <span class="account_signup_company_icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M7 11V8a5 5 0 0 1 10 0v3"></path>
                   <rect x="5" y="11" width="14" height="10" rx="2"></rect>
@@ -221,28 +271,28 @@
             </div>
           </div>
 
-          <p class="corp-help">영문, 숫자, 특수문자를 포함해 8자 이상 입력해주세요.</p>
+          <p class="account_signup_company_help">영문, 숫자, 특수문자를 포함해 8자 이상 입력해주세요.</p>
         </div>
 
         <!-- 비밀번호 재확인 -->
-        <div class="corp-field">
-          <div class="corp-field__head">
-            <label class="corp-field__label" for="passwordConfirm">
-              비밀번호 재확인<span class="required">*</span>
+        <div class="account_signup_company_field">
+          <div class="account_signup_company_head">
+            <label class="account_signup_company_lbl" for="passwordConfirm">
+              비밀번호 재확인<span class="account_signup_company_req">*</span>
             </label>
 
             <!-- JS 연결 시 is-show 추가 -->
-            <span class="corp-feedback corp-feedback--error" id="passwordConfirmErrorMsg">
+            <span class="account_signup_company_msg is-error" id="passwordConfirmErrorMsg">
               비밀번호가 일치하지 않습니다
             </span>
-            <span class="corp-feedback corp-feedback--success" id="passwordConfirmSuccessMsg">
+            <span class="account_signup_company_msg is-success" id="passwordConfirmSuccessMsg">
               비밀번호가 일치합니다
             </span>
           </div>
 
-          <div class="corp-control corp-control--with-btn">
-            <div class="corp-inputbox corp-inputbox--icon" id="passwordConfirmBox">
-              <span class="corp-inputbox__icon" aria-hidden="true">
+          <div class="account_signup_company_ctrl has-btn">
+            <div class="account_signup_company_box has-icon" id="passwordConfirmBox">
+              <span class="account_signup_company_icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M7 11V8a5 5 0 0 1 10 0v3"></path>
                   <rect x="5" y="11" width="14" height="10" rx="2"></rect>
@@ -256,17 +306,18 @@
                 autocomplete="new-password"
               />
             </div>
-            <button type="button" class="corp-action-btn" id="checkPasswordBtn">
+            <button type="button" class="account_signup_company_btn" id="checkPasswordBtn">
               확인
             </button>
           </div>
         </div>
 
-        <button type="submit" class="corp-join-submit">회원가입</button>
+        <!-- 회원가입 완료 버튼 -->
+        <button type="submit" class="account_signup_company_submit">회원가입</button>
       </form>
     </section>
   </main>
 
-  <!-- 공통 footer -->
+  <!-- 공통 footer 영역 -->
 </body>
 </html>

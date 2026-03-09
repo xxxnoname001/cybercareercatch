@@ -3,7 +3,7 @@
     
     * account_signup_container    (전체를 감싸는 컨테이너)
     * account_signup_inner        (중앙 정렬 이너 박스)
-    * account_signup_breadcrumb   (경로 표시줄)
+    * account_signup_path   (경로 표시줄)
     * account_signup_type_section (회원 유형 선택 구역)
     * account_signup_title_wrap   (제목 영역 랩퍼)
     * account_signup_deco_line    (제목 양옆 꾸밈 선)
@@ -37,8 +37,8 @@ body {
   padding: 0 20px;
 }
 
-/* 경로 표시줄 (Breadcrumb) */
-.account_signup_breadcrumb {
+/* 경로 표시줄 (path) */
+.account_signup_path {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -47,20 +47,20 @@ body {
   color: #777;
 }
 
-.account_signup_breadcrumb_link {
+.account_signup_path_link {
   color: #555;
   text-decoration: none;
 }
 
-.account_signup_breadcrumb_link:hover {
+.account_signup_path_link:hover {
   text-decoration: underline;
 }
 
-.account_signup_breadcrumb_arrow {
+.account_signup_path_arrow {
   color: #999;
 }
 
-.account_signup_breadcrumb_current {
+.account_signup_path_current {
   color: #666;
 }
 
@@ -169,7 +169,7 @@ body {
     padding: 20px 0 100px;
   }
 
-  .account_signup_breadcrumb {
+  .account_signup_path {
     margin-bottom: 80px;
   }
 

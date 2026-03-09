@@ -1,56 +1,4 @@
 <!DOCTYPE html>
-<!--
-  [signup-member.html 클래스 설명]
-  signup-member_body
-  : 페이지 전체 body 스타일을 적용하는 클래스
-  signup-member_page
-  : header / footer 제외한 회원가입 본문 전체 영역
-  signup-member_wrap
-  : 회원가입 폼을 중앙 정렬하고 최대 너비를 잡는 박스
-  signup-member_tit
-  : 회원가입 제목 텍스트 스타일
-  signup-member_form
-  : 회원가입 전체 form 영역
-  signup-member_sec
-  : 각 입력 항목 1줄(이름, 생년월일, 전화번호 등) 단위 섹션
-  signup-member_head
-  : 라벨과 메시지를 가로 정렬하는 상단 영역
-  signup-member_lab
-  : 각 입력 항목의 라벨 텍스트
-  signup-member_req
-  : 필수 입력 표시 * 스타일
-  signup-member_msgs
-  : 에러 / 성공 메시지들을 감싸는 영역
-  signup-member_msg
-  : 메시지 공통 기본 스타일
-    (기본은 display:none 이고 JS에서 보여줄 때 사용)
-  signup-member_msg_err
-  : 에러 메시지 색상 스타일
-  signup-member_msg_ok
-  : 성공 메시지 색상 스타일
-  signup-member_msg_show
-  : JS에서 메시지를 실제로 보이게 할 때 추가하는 상태 클래스
-  signup-member_ctl
-  : input 또는 radio 등을 감싸는 control 영역
-  signup-member_ctl_row
-  : input + 버튼을 한 줄로 배치할 때 추가하는 클래스
-  signup-member_inpbox
-  : input 바깥 테두리 박스
-  signup-member_inp
-  : 실제 입력창 input 요소
-  signup-member_inpbox_err
-  : JS에서 input 박스를 에러 상태로 표시할 때 추가하는 클래스
-  signup-member_inpbox_ok
-  : JS에서 input 박스를 성공 상태로 표시할 때 추가하는 클래스
-  signup-member_btn_sm
-  : 문자인증 / 확인 버튼처럼 오른쪽에 붙는 작은 버튼
-  signup-member_gender
-  : 성별 라디오 그룹 전체 영역
-  signup-member_gender_item
-  : 성별 라디오 1개(남성 / 여성) 묶음
-  signup-member_submit
-  : 최종 회원가입 버튼
--->
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -59,12 +7,60 @@
   <link rel="stylesheet" href="../../../assets/css/main/account/signup-member.css" />
 </head>
 
-<!-- signup-member_body : 페이지 전체 기본 배경, 글꼴, 기본 색상 적용 -->
+<!--
+  =============================================================
+  [signup-member.html 클래스명 뜻 안내 (전체 목록)]
+  * signup-member_body : 페이지 전체 body 스타일을 적용하는 클래스
+  * signup-member_page : header / footer 제외한 회원가입 본문 전체 영역
+  * signup-member_inner : 경로 표시줄 등 전체 요소를 감싸는 중앙 정렬 박스 (추가됨)
+  * signup-member_path : 상단 경로 표시줄 전체 영역 (홈 > 회원가입 > 일반회원가입 약관동의 > 일반회원가입) (추가됨)
+  * signup-member_path_link : 경로 표시줄 내의 클릭 가능한 링크 (추가됨)
+  * signup-member_path_arrow : 경로 구분 화살표 (>) (추가됨)
+  * signup-member_path_current : 현재 위치 텍스트 (일반회원가입) (추가됨)
+  * signup-member_wrap : 회원가입 폼을 중앙 정렬하고 최대 너비를 잡는 박스
+  * signup-member_tit : 회원가입 제목 텍스트 스타일
+  * signup-member_form : 회원가입 전체 form 영역
+  * signup-member_sec : 각 입력 항목 1줄(이름, 생년월일, 전화번호 등) 단위 섹션
+  * signup-member_head : 라벨과 메시지를 가로 정렬하는 상단 영역
+  * signup-member_lab : 각 입력 항목의 라벨 텍스트
+  * signup-member_req : 필수 입력 표시 * 스타일
+  * signup-member_msgs : 에러 / 성공 메시지들을 감싸는 영역
+  * signup-member_msg : 메시지 공통 기본 스타일 (기본은 display:none 이고 JS에서 보여줄 때 사용)
+  * signup-member_msg_err : 에러 메시지 색상 스타일
+  * signup-member_msg_ok : 성공 메시지 색상 스타일
+  * signup-member_msg_show : JS에서 메시지를 실제로 보이게 할 때 추가하는 상태 클래스
+  * signup-member_ctl : input 또는 radio 등을 감싸는 control 영역
+  * signup-member_ctl_row : input + 버튼을 한 줄로 배치할 때 추가하는 클래스
+  * signup-member_inpbox : input 바깥 테두리 박스
+  * signup-member_inpbox_err : JS에서 input 박스를 에러 상태로 표시할 때 추가하는 클래스
+  * signup-member_inpbox_ok : JS에서 input 박스를 성공 상태로 표시할 때 추가하는 클래스
+  * signup-member_inp : 실제 입력창 input 요소
+  * signup-member_btn_sm : 문자인증 / 확인 버튼처럼 오른쪽에 붙는 작은 버튼
+  * signup-member_gender : 성별 라디오 그룹 전체 영역
+  * signup-member_gender_item : 성별 라디오 1개(남성 / 여성) 묶음
+  * signup-member_submit : 최종 회원가입 버튼
+  =============================================================
+-->
+
 <body class="signup-member_body">
   <!-- 공통 header -->
 
   <!-- signup-member_page : 실제 회원가입 콘텐츠가 들어가는 본문 영역 -->
   <main class="signup-member_page">
+
+    <!-- ★ 경로 표시줄 (path) 추가 ★ -->
+    <div class="signup-member_inner">
+      <nav class="signup-member_path" aria-label="path">
+        <!-- 링크 이동 설정 완료 -->
+        <a href="/" class="signup-member_path_link">홈</a>
+        <span class="signup-member_path_arrow">&gt;</span>
+        <a href="signup.html" class="signup-member_path_link">회원가입</a>
+        <span class="signup-member_path_arrow">&gt;</span>
+        <a href="terms_member.html" class="signup-member_path_link">일반회원가입 약관동의</a>
+        <span class="signup-member_path_arrow">&gt;</span>
+        <span class="signup-member_path_current">일반회원가입</span>
+      </nav>
+    </div>
 
     <!-- signup-member_wrap : 가운데 정렬 + 최대 500px 폼 영역 -->
     <section class="signup-member_wrap" aria-labelledby="signupMemberTitle">
@@ -73,7 +69,7 @@
       <h1 id="signupMemberTitle" class="signup-member_tit">회원가입</h1>
 
       <!-- signup-member_form : 일반회원가입 form 전체 -->
-      <form class="signup-member_form" action="#" method="post" novalidate>
+      <form class="signup-member_form" action="/" method="post" novalidate>
 
         <!-- ===================================================== -->
         <!-- 이름 -->
