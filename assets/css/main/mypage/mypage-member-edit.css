@@ -89,7 +89,7 @@
   margin-top: 30px;
 }
 
-#mypage-editcancel-btn{
+#mypage-pweditcancel-btn, #mypage-infoeditcancel-btn{
   background-color: rgba(244,7,7,0.5);
 }
 
