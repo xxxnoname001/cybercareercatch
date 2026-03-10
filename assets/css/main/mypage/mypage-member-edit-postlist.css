@@ -105,8 +105,8 @@ body{
   display:block;
 }
 
-.QnAlist-title:hover,
-.QnAlist-title:active{
+a.QnAlist-title:hover,
+a.QnAlist-title:active{
   color:black;
   text-decoration:underline;
 }
