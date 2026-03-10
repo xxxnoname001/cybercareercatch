@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지</title>
+  <link rel="stylesheet" href="../../../assets/css/main/mainpage/mainpage-logout.css">
+
+  <script defer src="../../../assets/js/main/mainpage/mainpage-login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+</head>
+
+<body>
+  <div class="mainpage-main-container">
+    <div class="mainpage-section-searchjob">
+      <div class="mainpage-searchjob-title">
+        "CyberCarrerCatch에서 자신에게 맞는<br>
+        적성분야를 찾고, 당신의 커리어를 주도하세요."
+      </div>
+      <div class="mainpage-searchjob-question" id="question">
+        Q1. 질문 뭐시기저시기 뭐를 적으면 좋을까나
+      </div>
+      <div class="mainpage-searchjob-searchbar">
+        <input type="text" name="answer" id="mainpage-searchjob-answer" placeholder="답변을 입력해주세요">
+        <img src="../../../assets/img/검색돋보기.png" alt="검색" id="searchimg">
+      </div>
+    </div>
+
+    <div class="mainpage-section-jobcategory">
+      <div class="mainpage-section-title">추천 직군 유형</div>
+
+      <div class="mainpage-jobcategory-cards">
+        <a href="./../roadmap/roadmap-questionnaire1.html" class="mainpage-jobcategory-card">
+          <div class="mainpage-jobcategory-cardtitle">
+            <img class="jobcategory-cardtitle-img" src="../../../assets/img/보안컨설팅 계열 직군 마크.png" alt="">
+            <div class="mainpage-jobcategory-cardtitletext">보안컨설팅</div>
+          </div>
+          <div class="mainpage-jobcategory-cardcontent">
+            고객의 요청 대상에 취약점 진단 컨설팅을 수행하여 최신의 해킹 및 침해 형태 변화에 따른 대응을 강화하고,
+            지속적으로 최상의 보안 상태를 유지 및 관리할 수 있도록 진단 컨설팅을 제공
+          </div>
+          <div class="mainpage-jobcategory-cardbottom">
+            <div class="mainpage-jobcategory-cardbottomtext">관련직군소개</div>
+          </div>
+        </a>
+
+        <a href="./../roadmap/roadmap-questionnaire2.html" class="mainpage-jobcategory-card">
+          <div class="mainpage-jobcategory-cardtitle">
+            <img class="jobcategory-cardtitle-img" src="../../../assets/img/시스템 네트워크 엔지니어 마크.png" alt="">
+            <div class="mainpage-jobcategory-cardtitletext">시스템/네트워크/엔지니어</div>
+          </div>
+          <div class="mainpage-jobcategory-cardcontent">
+            보안 시스템을 설계하고 구축하며, 개발과 인프라 환경에 보안을 적용하는 계열
+          </div>
+          <div class="mainpage-jobcategory-cardbottom">
+            <div class="mainpage-jobcategory-cardbottomtext">관련직군소개</div>
+          </div>
+        </a>
+
+        <a href="./../roadmap/roadmap-questionnaire3.html" class="mainpage-jobcategory-card">
+          <div class="mainpage-jobcategory-cardtitle">
+            <img class="jobcategory-cardtitle-img" src="../../../assets/img/보안관제.png" alt="">
+            <div class="mainpage-jobcategory-cardtitletext">보안관제</div>
+          </div>
+          <div class="mainpage-jobcategory-cardcontent">
+            조직의 정보 자산 보호를 위한 24시간 365일 사이버 위협 대응 및 사전 예방을 담당하는 계열
+          </div>
+          <div class="mainpage-jobcategory-cardbottom">
+            <div class="mainpage-jobcategory-cardbottomtext">관련직군소개</div>
+          </div>
+        </a>
+
+        <a href="./../roadmap/roadmap-questionnaire4.html" class="mainpage-jobcategory-card">
+          <div class="mainpage-jobcategory-cardtitle">
+            <img class="jobcategory-cardtitle-img" src="../../../assets/img/침해 사고 디지털 포렌식.png" alt="">
+            <div class="mainpage-jobcategory-cardtitletext">침해사고 포렌식</div>
+          </div>
+          <div class="mainpage-jobcategory-cardcontent">
+            해킹 악성코드 등 정보시스템 침해 시 원인과 경로를 규명하고 증거의 무결성을 확보하여 분석하는 분야
+          </div>
+          <div class="mainpage-jobcategory-cardbottom">
+            <div class="mainpage-jobcategory-cardbottomtext">관련직군소개</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mainpage-section-companyad">
+      <div class="mainpage-section-titlebox">
+        <div class="mainpage-section-title">기업 홍보</div>
+        <a href="./../company/company-ad.html">
+          <img id="showmore" src="../../../assets/img/showmore.png" alt="더보기">
+        </a>
+      </div>
+
+      <div class="mainpage-companyad-companycards">
+        <a href="./../company/company-info.html" class="mainpage-companyad-companycard">
+          <img src="../../../assets/img/기업이미지_샘플1.jpg" alt="" class="mainpage-companyad-companyimg">
+          <div class="mainpage-companyad-companycardtext">
+            <div class="mainpage-companyad-companyname">기업명</div>
+            <div class="mainpage-companyad-companysummary">기업한줄소개</div>
+            <div class="mainpage-companyad-companyaddress">서울시 강남구</div>
+          </div>
+        </a>
+
+        <a href="./../company/company-info.html" class="mainpage-companyad-companycard">
+          <img src="../../../assets/img/기업이미지_샘플1.jpg" alt="" class="mainpage-companyad-companyimg">
+          <div class="mainpage-companyad-companycardtext">
+            <div class="mainpage-companyad-companyname">기업명</div>
+            <div class="mainpage-companyad-companysummary">기업한줄소개</div>
+            <div class="mainpage-companyad-companyaddress">서울시 강남구</div>
+          </div>
+        </a>
+
+        <a href="./../company/company-info.html" class="mainpage-companyad-companycard">
+          <img src="../../../assets/img/기업이미지_샘플1.jpg" alt="" class="mainpage-companyad-companyimg">
+          <div class="mainpage-companyad-companycardtext">
+            <div class="mainpage-companyad-companyname">기업명</div>
+            <div class="mainpage-companyad-companysummary">기업한줄소개</div>
+            <div class="mainpage-companyad-companyaddress">서울시 강남구</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mainpage-section-community">
+      <div class="mainpage-section-title">커뮤니티</div>
+
+      <div class="mainpage-community-cards">
+        <a href="./../community/post-list.html" class="mainpage-community-card">
+          <div class="mainpage-community-cardtop">
+            <div class="mainpage-community-cardlabel">FREE</div>
+          </div>
+
+          <div class="mainpage-community-cardmiddle">
+            <div class="mainpage-community-cardtitle">자유게시판</div>
+            <div class="mainpage-community-cardcontent">
+              회원들이 자유롭게 이야기를 나누는 공간입니다.
+              취업 준비, 프로젝트, 공부, 일상 이야기를 편하게 공유해보세요.
+            </div>
+          </div>
+
+          <div class="mainpage-community-cardbottom">
+            <div class="mainpage-community-cardbottomtext">게시판 바로가기</div>
+            <div class="mainpage-community-cardarrow">→</div>
+          </div>
+        </a>
+
+        <a href="./../qna/qna-list.html" class="mainpage-community-card">
+          <div class="mainpage-community-cardtop">
+            <div class="mainpage-community-cardlabel">Q&A</div>
+          </div>
+
+          <div class="mainpage-community-cardmiddle">
+            <div class="mainpage-community-cardtitle">기업 Q&amp;A</div>
+            <div class="mainpage-community-cardcontent">
+              기업에게 궁금한 점을 질문하고 답변을 확인할 수 있습니다.
+              직무, 채용 절차, 기업 문화에 대해 직접 물어보세요.
+            </div>
+          </div>
+
+          <div class="mainpage-community-cardbottom">
+            <div class="mainpage-community-cardbottomtext">Q&amp;A 바로가기</div>
+            <div class="mainpage-community-cardarrow">→</div>
+          </div>
+        </a>
+
+        <div class="mainpage-community-calendarcard">
+          <div class="mainpage-community-calendarhead">
+            <div>
+              <div class="mainpage-community-calendartitle">박람회 일정</div>
+              <div class="mainpage-community-calendardesc">다가오는 행사 일정을 확인해보세요.</div>
+            </div>
+            <a href="./../expo/expo-calendar.html" class="mainpage-community-calendarlink">전체보기</a>
+          </div>
+
+          <div id="mainpageCalendar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

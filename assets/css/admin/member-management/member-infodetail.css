@@ -1,206 +1,266 @@
-.body{
+/* 전체 배경 */
+
+.member-infodetail-body{
 margin:0;
 background:#ffffff;
-/**/font-family:sans-serif;
 }
-.container{
-margin:40px auto;
-padding:30px;
+
+
+/* 전체 컨테이너 */
+
+.member-infodetail-container{
 width:1300px;
+margin:40px auto;
 background:#c9cfe0;
+padding:30px;
 }
 
 
-/* -------------------------상단 헤더-------------------- */
-/* .top{
+/* 상단 헤더 */
+
+.member-infodetail-header{
 display:flex;
 align-items:center;
 justify-content:space-between;
-} */
-/* 로그아웃 버튼 */
-.justlogout{
-  display:flex;
 }
-.logout{
-background:#f2f2f2;
+
+/* 기존 div 스타일 유지 */
+.member-infodetail-title {
+    background:#6b83d6;
+    color:white;          /* 이건 a의 글씨 색에도 적용될 예정 */
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block; /* a가 안 깨지도록 */
+}
+
+/* a 태그 스타일 초기화 + div 스타일과 동일하게 */
+.member-infodetail-title a {
+    color: inherit;       /* div의 color 상속 */
+    text-decoration: none; /* 밑줄 제거 */
+    display:block;        /* div 안에서 영역 전체 클릭 가능 */
+    width:100%;
+    height:100%;
+}
+
+
+/* 상단 메뉴 */
+
+.member-infodetail-menu{
+display:flex;
+gap:40px;
+}
+
+.member-infodetail-menu a{
+background:#6b83d6;
+color:white;
+padding:10px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.member-infodetail-menu a:hover{
+background:#5569c1;
+}
+
+
+/* 로그아웃 */
+
+.member-infodetail-logout{
 padding:6px 12px;
-margin-left: auto;
-/**/cursor:pointer;
-/**/border:1px solid #888;
-/**/border-radius:8px;
 }
-/**/.logout:hover{
+
+.member-infodetail-logout:hover{
 background:#dcdcdc;
-}/*조금은 내 생각관 다름 그치만 좋은 듯*/
+}
 
 
+/* 메인 영역 */
 
-
-
-/* 왼쪽 영역 */
-.header-left{
+.member-infodetail-main{
 display:flex;
-gap:30px;/*공통으로 맞출것*/
-/**/align-items:center;
-}
-
-/*관리자페이지*/
-.title{
-width:150px;/*공통으로 맞출것*/
-background:#6b83d6;
-color:white;
-text-align: center;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-box-sizing: content-box;/*공통으로 맞출것*/
-/**/border-radius:8px;
-/**/font-weight:bold;
-}
-
-/*메뉴모음집*/
-.menu1{
-flex:1;
-display:flex;/*이걸 써야 밑(자식)에께 의미가 있어짐*/
-/* gap:350px;이거 간격 !!!!!!!! 조정해볼것!!!!!!!! */
-/**/justify-content:space-around;
-background:#6b83d6;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-/**/border-radius:8px;
-}
-.menu1 a{
-color:white;
-text-decoration:none;/*밑줄제거*/
-/**/font-weight:bold;
+margin-top:30px;
+gap:20px;
 }
 
 
+/* 사이드바 */
 
-
-
-
-
-/* ----------------------메인 영역 ---------------------*/
-.main{
-display:flex;
-gap:30px;
-/**//* margin-top:20px; */
-}
-
-
-
-/* 왼쪽 사이드바 */
-.m-leftbar{
-width:220px;/*140+35+35*/
+.member-infodetail-sidebar{
+width:200px;
 background:#adbbdb;
-box-sizing: content-box;
+padding-top:20px;
 }
 
-.aaa{
-background:#8a8a8a;
-color:white;
-font-weight:700;
-/*?*/cursor:default;
-/*?*/user-select:none;
-}
-.m-left-item{
+.member-infodetail-sidebar-item{
+padding:20px;
 margin-bottom:10px;
 text-align:center;
-border-radius:4px;
-color:#222;
-/**/padding:12px 35px;/*공통으로 맞출것*//*이게 킥*/
-/*?*/cursor:pointer;
+cursor:pointer;
+background:#adbbdb;
 }
-.m-left-item:hover{
+
+.member-infodetail-sidebar-item a{
+color:black;
+text-decoration:none;
+display:block;
+}
+
+.member-infodetail-sidebar-item:hover{
 background:#949fca;
+}
+
+.member-infodetail-sidebar-item:hover a{
 color:white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 콘텐츠 */
-.content{
-    flex:1;
-    background:#f5f5f5;
-    /* margin-left:20px;
-    padding:30px; */
-    /**/padding:12px 35px;/*공통으로 맞출것*/
+.member-infodetail-sidebar-item.member-infodetail-active{
+background:#8a8a8a;
 }
 
-.section-title{
-    margin-bottom:20px;
+.member-infodetail-sidebar-item.member-infodetail-active a{
+color:white;
+font-weight:700;
 }
 
-.move-btn{
-    float:right;
-    background:#7a88f0;
-    color:white;
-    border:none;
-    padding:8px 14px;
-    border-radius:5px;
+
+/* 오른쪽 콘텐츠 */
+
+.member-infodetail-content{
+flex:1;
+background:#f5f5f5;
+padding:12px 35px;
 }
 
-/* 정보 테이블 */
 
-table{
-    width:100%;
-    border-collapse:collapse;
+/* 상단 제목 영역 */
+
+.member-infodetail-section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
 }
 
-th, td{
-    border:1px solid #ccc;
-    padding:10px;
+.member-infodetail-section-title{
+font-size:20px;
+font-weight:bold;
 }
 
-th{
-    background:#e5e5e5;
-    width:180px;
+
+/* 목록 이동 버튼 */
+
+/* .member-infodetail-move-btn{
+background:#7a88f0;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:5px;
+cursor:pointer;
 }
 
-.update{
-    margin-top:20px;
-    font-weight:bold;
+.member-infodetail-move-btn:hover{
+background:#5f6de0;
+} */
+.member-infodetail-move-btn{
+display:inline-block;
+background:#6b83d6;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+text-decoration:none;
+cursor:pointer;
 }
 
-.date-box{
-    margin-top:10px;
-    border:1px solid #ccc;
-    padding:10px;
-    width:300px;
-    background:#eee;
+/* hover 추가 */
+
+.member-infodetail-move-btn:hover{
+background:#5569c1;
 }
+
+/* 회원 정보 영역 */
+
+.member-infodetail-info{
+width:100%;
+border:1px solid #ccc;
+}
+
+
+/* 정보 한 줄 */
+
+.member-infodetail-row{
+display:flex;
+border-bottom:1px solid #ccc;
+}
+
+.member-infodetail-row:last-child{
+border-bottom:none;
+}
+
+
+/* 라벨 */
+
+.member-infodetail-label{
+width:180px;
+background:#e5e5e5;
+padding:12px;
+font-weight:bold;
+}
+
+
+/* 값 */
+
+.member-infodetail-value{
+flex:1;
+padding:12px;
+background:white;
+}
+
+
+/* 로그인 업데이트 */
+
+.member-infodetail-update{
+margin-top:20px;
+font-weight:bold;
+}
+
+
+/* 날짜 박스 */
+
+.member-infodetail-date-box{
+margin-top:10px;
+border:1px solid #ccc;
+padding:10px;
+width:300px;
+background:#eee;
+}
+
+
+/* 삭제 버튼 영역 */
+
+.member-infodetail-delete-area{
+text-align:right;
+margin-top:80px;
+}
+
 
 /* 삭제 버튼 */
 
-.delete-area{
-    text-align:right;
-    margin-top:80px;
+.member-infodetail-delete-btn{
+background:#ff6a6a;
+border:none;
+color:white;
+padding:8px 16px;
+border-radius:4px;
+cursor:pointer;
 }
 
-.delete-btn{
-    background:#ff6a6a;
-    border:none;
-    color:white;
-    padding:8px 16px;
-    border-radius:4px;
+.member-infodetail-delete-btn:hover{
+background:#e04848;
 }
 
 
-
-
+/* 삭제 버튼 */ /* .delete-area{ text-align:right; margin-top:80px; }
+ .approve{ background:#1c33e6; color:white; border:none; padding:10px 18px; font-size:18px; border-radius:8px; cursor:pointer; }
+  .reject{ background:#9e9e9e; color:white; border:none; padding:10px 18px; font-size:18px; border-radius:8px; cursor:pointer; } */ 

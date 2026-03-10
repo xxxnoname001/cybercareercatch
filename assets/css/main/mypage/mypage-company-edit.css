@@ -64,6 +64,10 @@
   border-radius:6px;
   border:1px solid rgba(0, 0, 0, 0.2);
   cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
 }
 
 
@@ -82,10 +86,18 @@
   background-color: rgba(244,7,7,0.5);
 }
 
+.company-quit-wrap{
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0 30px;
+}
+
 #company-quit{
-  display: block;
-  margin: 50px 0 30px auto;
   background-color: rgba(244,7,7,0.5);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mypage-input-wrap{

@@ -64,6 +64,21 @@
   border-radius:6px;
   border:1px solid rgba(0, 0, 0, 0.2);
   cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+
+.member-quit-wrap{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:50px;
+}
+
+#member-quit{
+  background-color: rgba(244,7,7,0.5);
 }
 
 
@@ -78,11 +93,6 @@
   background-color: rgba(244,7,7,0.5);
 }
 
-#member-quit{
-  margin-top:50px;
-  float:right;
-  background-color: rgba(244,7,7,0.5)
-}
 
 .mypage-input-wrap{
   display:flex;

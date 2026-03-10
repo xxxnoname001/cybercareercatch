@@ -72,6 +72,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+#searchimg{
+  cursor:pointer;
+}
+
 .mainpage-section-jobcategory {
   margin-top: 70px;
   display: flex;

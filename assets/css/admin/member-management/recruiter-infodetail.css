@@ -1,0 +1,219 @@
+.recruiter-infodetail-body{
+margin:0;
+background:#ffffff;
+}
+
+.recruiter-infodetail-container{
+width:1300px;
+margin:40px auto;
+background:#c9cfe0;
+padding:30px;
+}
+
+.recruiter-infodetail-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.recruiter-infodetail-title {
+background:#6b83d6;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+display:inline-block;
+}
+
+.recruiter-infodetail-title a {
+color: inherit;
+text-decoration: none;
+display:block;
+width:100%;
+height:100%;
+}
+
+.recruiter-infodetail-menu{
+display:flex;
+gap:40px;
+}
+
+.recruiter-infodetail-menu a{
+background:#6b83d6;
+color:white;
+padding:10px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.recruiter-infodetail-menu a:hover{
+background:#5569c1;
+}
+
+.recruiter-infodetail-logout{
+padding:6px 12px;
+}
+
+.recruiter-infodetail-logout:hover{
+background:#dcdcdc;
+}
+
+.recruiter-infodetail-main{
+display:flex;
+margin-top:30px;
+gap:20px;
+}
+
+/* 사이드바 */
+
+.recruiter-infodetail-sidebar{
+width:200px;
+background:#adbbdb;
+padding-top:20px;
+}
+
+.recruiter-infodetail-sidebar-item{
+padding:20px;
+margin-bottom:10px;
+text-align:center;
+cursor:pointer;
+background:#adbbdb;
+}
+
+.recruiter-infodetail-sidebar-item a{
+color:black;
+text-decoration:none;
+display:block;
+}
+
+.recruiter-infodetail-sidebar-item:hover{
+background:#949fca;
+}
+
+.recruiter-infodetail-sidebar-item:hover a{
+color:white;
+}
+
+.recruiter-infodetail-sidebar-item.recruiter-infodetail-active{
+background:#8a8a8a;
+}
+
+.recruiter-infodetail-sidebar-item.recruiter-infodetail-active a{
+color:white;
+font-weight:700;
+}
+
+/* 콘텐츠 */
+
+.recruiter-infodetail-content{
+flex:1;
+background:#f5f5f5;
+padding:12px 35px;
+}
+
+.recruiter-infodetail-section-header{
+margin-bottom:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.recruiter-infodetail-section-title{
+font-size:18px;
+font-weight:bold;
+}
+
+/* 기존 버튼 스타일 */
+/*
+.recruiter-infodetail-move-btn{
+background:#7a88f0;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:5px;
+cursor:pointer;
+}
+*/
+
+/* 수정된 링크 버튼 스타일 */
+
+.recruiter-infodetail-move-btn{
+display:inline-block;
+background:#6b83d6;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+text-decoration:none;
+cursor:pointer;
+}
+
+/* hover 추가 */
+
+.recruiter-infodetail-move-btn:hover{
+background:#5569c1;
+}
+
+/* 회원 정보 */
+
+.recruiter-infodetail-info{
+width:100%;
+border:1px solid #ccc;
+background:white;
+}
+
+.recruiter-infodetail-row{
+display:flex;
+border-bottom:1px solid #ccc;
+}
+
+.recruiter-infodetail-row:last-child{
+border-bottom:none;
+}
+
+.recruiter-infodetail-label{
+width:180px;
+background:#e5e5e5;
+padding:12px;
+font-weight:bold;
+}
+
+.recruiter-infodetail-value{
+flex:1;
+padding:12px;
+}
+
+/* 로그인 정보 */
+
+.recruiter-infodetail-update{
+margin-top:20px;
+font-weight:bold;
+}
+
+.recruiter-infodetail-date{
+margin-top:10px;
+border:1px solid #ccc;
+padding:10px;
+width:300px;
+background:#eee;
+}
+
+/* 삭제 버튼 */
+
+.recruiter-infodetail-delete-area{
+text-align:right;
+margin-top:80px;
+}
+
+.recruiter-infodetail-delete-btn{
+background:#ff6a6a;
+border:none;
+color:white;
+padding:8px 16px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.recruiter-infodetail-delete-btn:hover{
+background:#e05555;
+}
