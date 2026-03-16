@@ -1,39 +1,8 @@
-/*
-  =============================================================
-  [signup-company.css 클래스명 뜻 안내 (전체 목록 완벽 정리)]
-  * account_signup_company_body : 기업회원가입 페이지 전체 배경 영역 (body 태그용)
-  * account_signup_company_page : 상하좌우 여백을 잡아주는 메인 컨텐츠 구역 (main 태그용)
-  * account_signup_company_inner : 경로 표시줄 등 전체 요소를 감싸는 중앙 정렬 박스
-  * account_signup_company_path : 상단 경로 표시줄 영역 (홈 > 로그인 > 회원가입 > 기업약관동의 > 기업회원가입)
-  * account_signup_company_path_link : 경로 표시줄 내의 클릭 가능한 링크 (a 태그)
-  * account_signup_company_path_arrow : 경로 구분 화살표 (>)
-  * account_signup_company_path_current : 현재 위치를 나타내는 텍스트
-  * account_signup_company_wrap : 폼 컨텐츠를 화면 중앙에 묶어주는 박스
-  * account_signup_company_title : '기업 회원가입' 최상단 큰 제목
-  * account_signup_company_form : 여러 입력란들을 하나로 묶는 폼 전체
-  * account_signup_company_field : 라벨 + 입력칸 1개를 한 세트로 묶은 구역 (항목 단위)
-  * account_signup_company_head : 라벨과 상태 메시지가 가로로 놓이는 윗부분
-  * account_signup_company_lbl : 입력 항목 이름 (예: 기업명, 아이디 등)
-  * account_signup_company_req : 필수 입력을 뜻하는 파란색 별표(*) 기호
-  * account_signup_company_ctrl : 실제 입력박스와 우측 버튼을 가로로 묶는 영역
-  * has-btn : 우측에 버튼이 있는 입력 컨트롤 영역에 추가되는 상태 클래스 (너비 제어용)
-  * account_signup_company_box : 테두리가 쳐져 있는 실제 입력(인풋) 박스 래퍼
-  * has-icon : 박스 내부에 아이콘이 포함될 때 좌측 여백을 확보하는 상태 클래스
-  * account_signup_company_icon : 입력 박스 안쪽 왼쪽에 들어가는 아이콘 (사람, 자물쇠 등)
-  * account_signup_company_btn : '인증요청', '확인' 등에 쓰이는 우측의 작은 파란색 버튼
-  * account_signup_company_msg : 에러/성공 등을 알려주는 안내 텍스트 (기본 숨김)
-  * is-error : 에러 발생 시 안내 텍스트 붉은색 처리 및 입력 박스 테두리 붉은색 처리 상태 클래스
-  * is-success : 인증 성공 시 안내 텍스트 파란색 처리 및 입력 박스 테두리 파란색 처리 상태 클래스
-  * is-show : 숨겨진 안내 텍스트를 화면에 표시할 때 사용하는 상태 클래스 (JS에서 추가)
-  * account_signup_company_help : 입력창 바로 밑에 항상 떠 있는 회색 도움말 텍스트
-  * account_signup_company_submit : 제일 아래 배치되는 꽉 차는 최종 '회원가입' 버튼
-  =============================================================
-*/
-
-header{
-  height: 166px;
-  background-color: #ff0000;
+header,
+footer {
+  min-height: 1px;
 }
+
 .account_signup_company_body {
   margin: 0;
   background: #ffffff;
@@ -49,40 +18,6 @@ header{
 
 .account_signup_company_page {
   padding: 40px 20px 120px;
-}
-
-.account_signup_company_inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* 경로 표시줄 (path) 디자인 */
-.account_signup_company_path {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  font-size: 13px;
-  color: #777;
-}
-
-.account_signup_company_path_link {
-  color: #555;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.account_signup_company_path_link:hover {
-  color: #7d84ff; /* 일반회원가입과 호버 색상 통일 */
-  text-decoration: underline;
-}
-
-.account_signup_company_path_arrow {
-  color: #999;
-}
-
-.account_signup_company_path_current {
-  color: #666;
 }
 
 .account_signup_company_wrap {
@@ -244,7 +179,6 @@ header{
   outline-offset: 2px;
 }
 
-/* 메시지 텍스트 공통 */
 .account_signup_company_msg {
   display: none;
   font-size: 12px;
@@ -256,7 +190,6 @@ header{
   display: inline-block;
 }
 
-/* ★ 끊겼던 CSS 복원 완료 ★ */
 .account_signup_company_msg.is-error {
   color: #ef6f6f;
 }
@@ -272,16 +205,15 @@ header{
   color: #8d95a3;
 }
 
-/* ★ 회원가입 버튼 일반회원가입과 동일하게 스타일 통일 ★ */
 .account_signup_company_submit {
   width: 100%;
-  height: 48px; /* 일반과 동일하게 48px로 변경 */
-  margin-top: 10px; /* 일반과 동일하게 여백 수정 */
+  height: 48px;
+  margin-top: 10px;
   border: none;
-  border-radius: 3px; /* 일반과 동일하게 둥글기 3px로 수정 */
-  background-color: #7d84ff; /* 일반과 동일한 보라색 코드 적용 */
+  border-radius: 3px;
+  background-color: #7d84ff;
   color: #ffffff;
-  font-size: 15px; /* 일반과 동일하게 15px로 수정 */
+  font-size: 15px;
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
@@ -321,7 +253,6 @@ header{
     height: 44px;
   }
 
-  /* 모바일에서 제출버튼 높이 50px 설정 (일반 회원가입 모바일 뷰와 동일) */
   .account_signup_company_submit {
     height: 50px;
   }

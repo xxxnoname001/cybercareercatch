@@ -1,43 +1,6 @@
-/*
-  =============================================================
-  [signup-member.css 클래스명 뜻 안내 (전체 목록)]
-  * signup-member_body : 페이지 전체 body 스타일을 적용하는 클래스
-  * signup-member_page : header / footer 제외한 회원가입 본문 전체 영역
-  * signup-member_inner : 경로 표시줄 등 전체 요소를 감싸는 중앙 정렬 박스 (추가됨)
-  * signup-member_path : 상단 경로 표시줄 전체 영역 (홈 > 회원가입 > 일반회원가입 약관동의 > 일반회원가입) (추가됨)
-  * signup-member_path_link : 경로 표시줄 내의 클릭 가능한 링크 (추가됨)
-  * signup-member_path_arrow : 경로 구분 화살표 (>) (추가됨)
-  * signup-member_path_current : 현재 위치 텍스트 (일반회원가입) (추가됨)
-  * signup-member_wrap : 회원가입 폼을 중앙 정렬하고 최대 너비를 잡는 박스
-  * signup-member_tit : 회원가입 제목 텍스트 스타일
-  * signup-member_form : 회원가입 전체 form 영역
-  * signup-member_sec : 각 입력 항목 1줄(이름, 생년월일, 전화번호 등) 단위 섹션
-  * signup-member_head : 라벨과 메시지를 가로 정렬하는 상단 영역
-  * signup-member_lab : 각 입력 항목의 라벨 텍스트
-  * signup-member_req : 필수 입력 표시 * 스타일
-  * signup-member_msgs : 에러 / 성공 메시지들을 감싸는 영역
-  * signup-member_msg : 메시지 공통 기본 스타일 (기본은 display:none 이고 JS에서 보여줄 때 사용)
-  * signup-member_msg_err : 에러 메시지 색상 스타일 (붉은색)
-  * signup-member_msg_ok : 성공 메시지 색상 스타일 (파란색)
-  * signup-member_msg_show : JS에서 메시지를 실제로 보이게 할 때 추가하는 상태 클래스
-  * signup-member_ctl : input 또는 radio 등을 감싸는 control 영역
-  * signup-member_ctl_row : input + 버튼을 한 줄로 배치할 때 추가하는 클래스
-  * signup-member_inpbox : input 바깥 테두리 박스
-  * signup-member_inpbox_err : JS에서 input 박스를 에러 상태로 표시할 때 추가하는 클래스
-  * signup-member_inpbox_ok : JS에서 input 박스를 성공 상태로 표시할 때 추가하는 클래스
-  * signup-member_inp : 실제 입력창 input 요소
-  * signup-member_btn_sm : 문자인증 / 확인 버튼처럼 오른쪽에 붙는 작은 버튼
-  * signup-member_gender : 성별 라디오 그룹 전체 영역
-  * signup-member_gender_item : 성별 라디오 1개(남성 / 여성) 묶음
-  * signup-member_submit : 최종 회원가입 버튼
-  =============================================================
-*/
-
-/* signup-member_body : 페이지 전체 기본 스타일 */
-
-header{
-  height: 166px;
-  background-color: #ff0000;
+header,
+footer {
+  min-height: 1px;
 }
 
 .signup-member_body {
@@ -47,61 +10,22 @@ header{
   font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
-/* signup-member_body 내부 모든 요소 box-sizing 통일 */
 .signup-member_body *,
 .signup-member_body *::before,
 .signup-member_body *::after {
   box-sizing: border-box;
 }
 
-/* signup-member_page : 본문 전체 여백 */
 .signup-member_page {
-  padding: 40px 20px 120px; /* 상단 경로 표시줄을 위해 패딩 조절 */
+  padding: 40px 20px 120px;
 }
 
-/* ★ 추가됨: 경로 표시줄 및 내용 전체 중앙 정렬용 이너 박스 */
-.signup-member_inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ★ 경로 표시줄 디자인 추가 */
-.signup-member_path {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  font-size: 13px;
-  color: #777;
-}
-
-.signup-member_path_link {
-  color: #555;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.signup-member_path_link:hover {
-  color: #7d84ff;
-  text-decoration: underline;
-}
-
-.signup-member_path_arrow {
-  color: #999;
-}
-
-.signup-member_path_current {
-  color: #666;
-}
-
-/* signup-member_wrap : 중앙 정렬 + 최대 500px */
 .signup-member_wrap {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
 
-/* signup-member_tit : 제목 스타일 */
 .signup-member_tit {
   margin: 0 0 20px;
   text-align: center;
@@ -112,21 +36,18 @@ header{
   color: #222222;
 }
 
-/* signup-member_form : form 전체를 세로 정렬 */
 .signup-member_form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-/* signup-member_sec : 항목 1개 단위 묶음 */
 .signup-member_sec {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-/* signup-member_head : 라벨과 메시지를 정렬하는 상단 영역 */
 .signup-member_head {
   min-height: 18px;
   display: flex;
@@ -136,7 +57,6 @@ header{
   flex-wrap: wrap;
 }
 
-/* signup-member_lab : 라벨 텍스트 */
 .signup-member_lab {
   font-size: 12px;
   font-weight: 700;
@@ -144,13 +64,11 @@ header{
   color: #2f3440;
 }
 
-/* signup-member_req : 필수 표시 * */
 .signup-member_req {
   margin-left: 3px;
   color: #7d84ff;
 }
 
-/* signup-member_msgs : 성공/에러 메시지 묶음 */
 .signup-member_msgs {
   display: flex;
   align-items: center;
@@ -158,7 +76,6 @@ header{
   flex-wrap: wrap;
 }
 
-/* signup-member_msg : 메시지 기본값은 숨김 */
 .signup-member_msg {
   display: none;
   font-size: 11px;
@@ -166,34 +83,28 @@ header{
   line-height: 1.4;
 }
 
-/* signup-member_msg_show : JS에서 추가하면 메시지 보임 */
 .signup-member_msg_show {
   display: inline-block;
 }
 
-/* signup-member_msg_err : 에러 메시지 색상 */
 .signup-member_msg_err {
   color: #ef6f6f;
 }
 
-/* signup-member_msg_ok : 성공 메시지 색상 */
 .signup-member_msg_ok {
   color: #7d84ff;
 }
 
-/* signup-member_ctl : input, radio, button 정렬용 영역 */
 .signup-member_ctl {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* signup-member_ctl_row 안에서는 input 박스가 남은 영역을 차지 */
 .signup-member_ctl_row .signup-member_inpbox {
   flex: 1 1 auto;
 }
 
-/* signup-member_inpbox : 입력창 외곽 박스 */
 .signup-member_inpbox {
   width: 100%;
   height: 40px;
@@ -203,29 +114,24 @@ header{
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-/* signup-member_inpbox hover 상태 */
 .signup-member_inpbox:hover {
   border-color: #cdd3e1;
 }
 
-/* signup-member_inpbox focus 상태 */
 .signup-member_inpbox:focus-within {
   border-color: #7d84ff;
   box-shadow: 0 0 0 3px rgba(125, 132, 255, 0.12);
 }
 
-/* signup-member_inpbox_err : 에러 상태 input 박스 */
 .signup-member_inpbox_err {
   border-color: #ef8a8a;
   background-color: #fffafa;
 }
 
-/* signup-member_inpbox_ok : 성공 상태 input 박스 */
 .signup-member_inpbox_ok {
   border-color: #7d84ff;
 }
 
-/* signup-member_inp : 실제 input */
 .signup-member_inp {
   width: 100%;
   height: 100%;
@@ -239,12 +145,10 @@ header{
   font-family: inherit;
 }
 
-/* signup-member_inp placeholder */
 .signup-member_inp::placeholder {
   color: #c0c6d2;
 }
 
-/* signup-member_btn_sm : 오른쪽 작은 버튼 */
 .signup-member_btn_sm {
   flex: 0 0 84px;
   width: 84px;
@@ -260,17 +164,14 @@ header{
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* signup-member_btn_sm hover */
 .signup-member_btn_sm:hover {
   background-color: #6d75ff;
 }
 
-/* signup-member_btn_sm active */
 .signup-member_btn_sm:active {
   transform: translateY(1px);
 }
 
-/* signup-member_gender : 성별 라디오 전체 그룹 */
 .signup-member_gender {
   display: flex;
   align-items: center;
@@ -279,7 +180,6 @@ header{
   padding: 0 2px;
 }
 
-/* signup-member_gender_item : 성별 옵션 1개 */
 .signup-member_gender_item {
   display: inline-flex;
   align-items: center;
@@ -290,7 +190,6 @@ header{
   cursor: pointer;
 }
 
-/* signup-member_gender_item 내부 라디오 버튼 */
 .signup-member_gender_item input[type="radio"] {
   width: 14px;
   height: 14px;
@@ -298,7 +197,6 @@ header{
   accent-color: #7d84ff;
 }
 
-/* signup-member_submit : 최종 회원가입 버튼 */
 .signup-member_submit {
   width: 100%;
   height: 48px;
@@ -314,55 +212,45 @@ header{
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* signup-member_submit hover */
 .signup-member_submit:hover {
   background-color: #6d75ff;
 }
 
-/* signup-member_submit active */
 .signup-member_submit:active {
   transform: translateY(1px);
 }
 
-/* 버튼 포커스 접근성 처리 */
 .signup-member_btn_sm:focus-visible,
 .signup-member_submit:focus-visible {
   outline: 3px solid rgba(125, 132, 255, 0.22);
   outline-offset: 2px;
 }
 
-/* 반응형 처리 */
 @media (max-width: 560px) {
-  /* signup-member_page : 모바일 여백 조정 */
   .signup-member_page {
     padding: 40px 16px 90px;
   }
 
-  /* signup-member_tit : 모바일 제목 크기 조정 */
   .signup-member_tit {
     font-size: 26px;
     margin-bottom: 18px;
   }
 
-  /* signup-member_ctl_row : 모바일에서 버튼을 아래로 배치 */
   .signup-member_ctl_row {
     flex-direction: column;
     align-items: stretch;
   }
 
-  /* signup-member_btn_sm : 모바일에서 버튼 전체 너비 사용 */
   .signup-member_btn_sm {
     width: 100%;
     flex: 0 0 auto;
   }
 
-  /* input / 버튼 높이 살짝 증가 */
   .signup-member_inpbox,
   .signup-member_btn_sm {
     height: 42px;
   }
 
-  /* signup-member_submit : 모바일 버튼 높이 조정 */
   .signup-member_submit {
     height: 50px;
   }
